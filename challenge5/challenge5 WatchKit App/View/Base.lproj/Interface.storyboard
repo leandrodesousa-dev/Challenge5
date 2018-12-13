@@ -29,14 +29,18 @@
             <objects>
                 <controller id="2fL-04-f34" customClass="InterfaceControllerRelogio" customModule="challenge5_WatchKit_Extension">
                     <items>
-                        <group width="1" height="0.40000000000000002" alignment="center" id="xjC-9M-WYN">
+                        <group width="1" alignment="left" layout="vertical" id="LLd-l3-4ay">
                             <items>
-                                <label height="1" alignment="center" text="00:00:00" id="QVo-ZB-vYf">
+                                <label alignment="center" text="Tempo de leitura" id="wMz-v7-Vp0">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                                <label alignment="center" text="00:00:00" id="QVo-ZB-vYf">
+                                    <color key="textColor" red="0.086678512394428253" green="0.51941472291946411" blue="0.66960698366165161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="32"/>
                                 </label>
                             </items>
                         </group>
-                        <group width="1" height="0.45000000000000001" heightAdjustment="-17" alignment="left" id="MKc-JY-ZcD">
+                        <group width="1" height="0.41999999999999998" heightAdjustment="-17" alignment="left" id="MKc-JY-ZcD">
                             <items>
                                 <button width="1" alignment="left" title="Start" id="rCs-AN-K1g">
                                     <connections>
@@ -59,6 +63,13 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="195" y="735"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="UgF-Zz-57Y">
+            <objects>
+                <controller id="2la-JL-M28"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="735"/>
         </scene>
         <!--Interface Controller Gravador-->
         <scene sceneID="2WY-9r-GVE">

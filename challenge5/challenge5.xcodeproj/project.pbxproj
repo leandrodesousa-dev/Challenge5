@@ -14,7 +14,7 @@
 		D7DF9E2121C1AAF20018B3EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E1F21C1AAF20018B3EA /* LaunchScreen.storyboard */; };
 		D7DF9E2621C1AAF20018B3EA /* challenge5 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D7DF9E2521C1AAF20018B3EA /* challenge5 WatchKit App.app */; };
 		D7DF9E2C21C1AAF20018B3EA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E2A21C1AAF20018B3EA /* Interface.storyboard */; };
-		D7DF9E2E21C1AAF30018B3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E2D21C1AAF30018B3EA /* Assets.xcassets */; };
+		D7DF9E2E21C1AAF30018B3EA /* Assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E2D21C1AAF30018B3EA /* Assests.xcassets */; };
 		D7DF9E3521C1AAF30018B3EA /* challenge5 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7DF9E3421C1AAF30018B3EA /* challenge5 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D7DF9E3A21C1AAF30018B3EA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */; };
 		D7DF9E3C21C1AAF30018B3EA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */; };
@@ -74,7 +74,7 @@
 		D7DF9E2221C1AAF20018B3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7DF9E2521C1AAF20018B3EA /* challenge5 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge5 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DF9E2B21C1AAF20018B3EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D7DF9E2D21C1AAF30018B3EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7DF9E2D21C1AAF30018B3EA /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assests.xcassets; sourceTree = "<group>"; };
 		D7DF9E2F21C1AAF30018B3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7DF9E3421C1AAF30018B3EA /* challenge5 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "challenge5 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DF9E2A21C1AAF20018B3EA /* Interface.storyboard */,
-				D7DF9E2D21C1AAF30018B3EA /* Assets.xcassets */,
+				D7DF9E2D21C1AAF30018B3EA /* Assests.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7DF9E2E21C1AAF30018B3EA /* Assets.xcassets in Resources */,
+				D7DF9E2E21C1AAF30018B3EA /* Assests.xcassets in Resources */,
 				D7DF9E2C21C1AAF20018B3EA /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -54,4 +54,55 @@ class InterfaceControllerRelogio: WKInterfaceController {
         super.didDeactivate()
     }
 
+    
+    //Funcoes
+    
+    func StartStop(){
+        if chave {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(InterfaceControllerRelogio.action), userInfo: nil , repeats: true)
+            print("Inicio")
+            btIniciarOut.setTitle("Stop")
+            chave = false
+        } else {
+            timer.invalidate()
+            chave = true
+            btIniciarOut.setTitle("Start")
+            print("pause")
+        }
+    }
+    
+    @objc func action(){
+        calculoDoTempo()
+    }
+    
+    func calculoDoTempo(){
+        tempo += 1
+        
+        if tempo == 60{
+            tempo=0
+            minutos += 1
+        }
+        
+        if minutos == 60{
+            minutos=0
+            horas+=1
+        }
+        
+        if tempo < 10 {
+            LabelRelogio.setText("00:0\(minutos):0\(tempo)")
+        } else {
+            if minutos < 10 {
+                LabelRelogio.setText("00:0\(minutos):\(tempo)")
+            }else{
+                if horas < 10{
+                    LabelRelogio.setText("0\(horas):\(minutos):\(tempo)")
+                }
+                else{
+                    LabelRelogio.setText("\(horas):\(minutos):\(tempo)")
+                }
+            }
+        }
+    }
+    
+    
 }

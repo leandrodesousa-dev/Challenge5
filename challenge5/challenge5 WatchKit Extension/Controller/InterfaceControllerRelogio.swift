@@ -12,6 +12,12 @@ import Foundation
 
 class InterfaceControllerRelogio: WKInterfaceController {
 
+    //Variaveis
+    var tempo = 0
+    var timer = Timer()
+    var chave = true
+    var minutos = 0
+    var horas = 0
     
     //Outlet da label e botões
     

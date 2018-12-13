@@ -31,7 +31,7 @@ class InterfaceControllerRelogio: WKInterfaceController {
     //Ações de botões
     
     @IBAction func IniciarPausar() {
-        
+        StartStop()
     }
     
     @IBAction func FinalizarBt() {
@@ -76,7 +76,7 @@ class InterfaceControllerRelogio: WKInterfaceController {
     }
     
     func calculoDoTempo(){
-        tempo += 1
+        tempo = tempo + 1
         
         if tempo == 60{
             tempo=0

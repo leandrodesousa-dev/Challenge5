@@ -32,6 +32,8 @@
                         <label alignment="left" text="Gostaria de ouvir o último resumo?" numberOfLines="0" id="OcC-AD-zwJ">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
+                        <imageView alignment="center" verticalAlignment="center" image="Image" id="J2R-zD-oHj"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y"/>
                     </items>
                 </controller>
             </objects>

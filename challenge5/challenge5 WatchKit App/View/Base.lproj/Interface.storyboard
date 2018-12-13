@@ -43,6 +43,7 @@
                         <group width="1" height="0.41999999999999998" heightAdjustment="-17" alignment="left" id="MKc-JY-ZcD">
                             <items>
                                 <button width="1" alignment="left" title="Start" id="rCs-AN-K1g">
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <connections>
                                         <action selector="IniciarPausar" destination="2fL-04-f34" id="lVr-R7-48c"/>
                                     </connections>
@@ -50,6 +51,7 @@
                             </items>
                         </group>
                         <button width="1" alignment="left" title="Finalizar" id="bSq-Z2-Afd">
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <connections>
                                 <action selector="FinalizarBt" destination="2fL-04-f34" id="5sj-gx-mR2"/>
                             </connections>

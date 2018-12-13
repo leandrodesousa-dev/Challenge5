@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Interface Controller Relogio-->
         <scene sceneID="fgg-Qf-7oj">
             <objects>
-                <controller id="2fL-04-f34">
+                <controller id="2fL-04-f34" customClass="InterfaceControllerRelogio" customModule="challenge5_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.40000000000000002" alignment="center" id="xjC-9M-WYN">
                             <items>
@@ -38,11 +38,24 @@
                         </group>
                         <group width="1" height="0.45000000000000001" heightAdjustment="-17" alignment="left" id="MKc-JY-ZcD">
                             <items>
-                                <button width="136" alignment="left" title="Pausar" id="rCs-AN-K1g"/>
+                                <button width="136" alignment="left" title="Pausar" id="rCs-AN-K1g">
+                                    <connections>
+                                        <action selector="IniciarPausar" destination="2fL-04-f34" id="lVr-R7-48c"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Finalizar" id="bSq-Z2-Afd"/>
+                        <button width="1" alignment="left" title="Finalizar" id="bSq-Z2-Afd">
+                            <connections>
+                                <action selector="FinalizarBt" destination="2fL-04-f34" id="5sj-gx-mR2"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="LabelRelogio" destination="QVo-ZB-vYf" id="BVr-yt-0b3"/>
+                        <outlet property="btFinalizarOut" destination="bSq-Z2-Afd" id="QvI-q4-BlA"/>
+                        <outlet property="btIniciarOut" destination="rCs-AN-K1g" id="jfC-zo-aFB"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="195" y="735"/>

@@ -126,11 +126,9 @@
 		D7DF9E1521C1AAF10018B3EA /* challenge5 */ = {
 			isa = PBXGroup;
 			children = (
-				D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */,
-				D7DF9E1821C1AAF10018B3EA /* ViewController.swift */,
-				D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */,
-				D7DF9E1D21C1AAF20018B3EA /* Assets.xcassets */,
-				D7DF9E1F21C1AAF20018B3EA /* LaunchScreen.storyboard */,
+				D7DF9E5221C261120018B3EA /* Model */,
+				D7DF9E5121C261080018B3EA /* View */,
+				D7DF9E5021C260F80018B3EA /* Controller */,
 				D7DF9E2221C1AAF20018B3EA /* Info.plist */,
 			);
 			path = challenge5;
@@ -139,8 +137,7 @@
 		D7DF9E2921C1AAF20018B3EA /* challenge5 WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				D7DF9E2A21C1AAF20018B3EA /* Interface.storyboard */,
-				D7DF9E2D21C1AAF30018B3EA /* Assets.xcassets */,
+				D7DF9E5321C261400018B3EA /* View */,
 				D7DF9E2F21C1AAF30018B3EA /* Info.plist */,
 			);
 			path = "challenge5 WatchKit App";
@@ -149,14 +146,73 @@
 		D7DF9E3821C1AAF30018B3EA /* challenge5 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */,
-				D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */,
-				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
-				D7DF9E3F21C1AAF40018B3EA /* Assets.xcassets */,
+				D7DF9E5621C261640018B3EA /* Model */,
+				D7DF9E5521C2615A0018B3EA /* View */,
+				D7DF9E5421C2614F0018B3EA /* Controller */,
 				D7DF9E4121C1AAF40018B3EA /* Info.plist */,
-				D7DF9E4221C1AAF40018B3EA /* PushNotificationPayload.apns */,
 			);
 			path = "challenge5 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D7DF9E5021C260F80018B3EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E1821C1AAF10018B3EA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7DF9E5121C261080018B3EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E1D21C1AAF20018B3EA /* Assets.xcassets */,
+				D7DF9E1F21C1AAF20018B3EA /* LaunchScreen.storyboard */,
+				D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7DF9E5221C261120018B3EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7DF9E5321C261400018B3EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E2A21C1AAF20018B3EA /* Interface.storyboard */,
+				D7DF9E2D21C1AAF30018B3EA /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7DF9E5421C2614F0018B3EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */,
+				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7DF9E5521C2615A0018B3EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E3F21C1AAF40018B3EA /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7DF9E5621C261640018B3EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */,
+				D7DF9E4221C1AAF40018B3EA /* PushNotificationPayload.apns */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

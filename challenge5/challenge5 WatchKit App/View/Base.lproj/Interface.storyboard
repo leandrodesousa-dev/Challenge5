@@ -25,6 +25,29 @@
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
         <!--Interface Controller-->
+        <scene sceneID="fgg-Qf-7oj">
+            <objects>
+                <controller id="2fL-04-f34">
+                    <items>
+                        <group width="1" height="0.40000000000000002" alignment="center" id="xjC-9M-WYN">
+                            <items>
+                                <label height="1" alignment="center" text="00:00:00" id="QVo-ZB-vYf">
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="0.45000000000000001" heightAdjustment="-17" alignment="left" id="MKc-JY-ZcD">
+                            <items>
+                                <button width="136" alignment="left" title="Pausar" id="rCs-AN-K1g"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Finalizar" id="bSq-Z2-Afd"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="195" y="735"/>
+        </scene>
+        <!--Interface Controller-->
         <scene sceneID="2WY-9r-GVE">
             <objects>
                 <controller id="BCI-Xf-2F0">
@@ -33,7 +56,11 @@
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <imageView alignment="center" verticalAlignment="center" image="Image" id="J2R-zD-oHj"/>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y">
+                            <connections>
+                                <segue destination="2fL-04-f34" kind="push" id="sfA-td-qLo"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

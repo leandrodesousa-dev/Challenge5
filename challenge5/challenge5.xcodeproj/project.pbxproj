@@ -21,6 +21,8 @@
 		D7DF9E3E21C1AAF30018B3EA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */; };
 		D7DF9E4021C1AAF40018B3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E3F21C1AAF40018B3EA /* Assets.xcassets */; };
 		D7DF9E5A21C2D5700018B3EA /* InterfaceControllerRelogio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */; };
+		D7DF9E5C21C2EB090018B3EA /* InterfaceControllerGravador.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */; };
+		D7DF9E5E21C2EC690018B3EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5D21C2EC690018B3EA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		D7DF9E4121C1AAF40018B3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7DF9E4221C1AAF40018B3EA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerRelogio.swift; sourceTree = "<group>"; };
+		D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerGravador.swift; sourceTree = "<group>"; };
+		D7DF9E5D21C2EC690018B3EA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 				D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */,
 				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
 				D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */,
+				D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			children = (
 				D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */,
 				D7DF9E4221C1AAF40018B3EA /* PushNotificationPayload.apns */,
+				D7DF9E5D21C2EC690018B3EA /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,8 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DF9E3E21C1AAF30018B3EA /* NotificationController.swift in Sources */,
+				D7DF9E5E21C2EC690018B3EA /* Extensions.swift in Sources */,
 				D7DF9E3C21C1AAF30018B3EA /* ExtensionDelegate.swift in Sources */,
 				D7DF9E5A21C2D5700018B3EA /* InterfaceControllerRelogio.swift in Sources */,
+				D7DF9E5C21C2EB090018B3EA /* InterfaceControllerGravador.swift in Sources */,
 				D7DF9E3A21C1AAF30018B3EA /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -60,15 +60,19 @@
             </objects>
             <point key="canvasLocation" x="195" y="735"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Interface Controller Gravador-->
         <scene sceneID="2WY-9r-GVE">
             <objects>
-                <controller id="BCI-Xf-2F0">
+                <controller id="BCI-Xf-2F0" customClass="InterfaceControllerGravador" customModule="challenge5_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Gostaria de ouvir o último resumo?" numberOfLines="0" id="OcC-AD-zwJ">
+                        <label width="136" alignment="left" text="Gostaria de ouvir o último resumo?" textAlignment="justified" numberOfLines="0" id="OcC-AD-zwJ">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <imageView alignment="center" verticalAlignment="center" image="Image" id="J2R-zD-oHj"/>
+                        <button alignment="center" verticalAlignment="center" backgroundImage="Image" id="NDB-5A-OxO">
+                            <connections>
+                                <action selector="btGravador" destination="BCI-Xf-2F0" id="WKc-rt-wVR"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y">
                             <connections>
                                 <segue destination="2fL-04-f34" kind="push" id="sfA-td-qLo"/>

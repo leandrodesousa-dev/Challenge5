@@ -23,6 +23,8 @@
 		D7DF9E5A21C2D5700018B3EA /* InterfaceControllerRelogio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */; };
 		D7DF9E5C21C2EB090018B3EA /* InterfaceControllerGravador.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */; };
 		D7DF9E5E21C2EC690018B3EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5D21C2EC690018B3EA /* Extensions.swift */; };
+		D7DF9E6021C41FF40018B3EA /* InterfaceControllerLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E5F21C41FF40018B3EA /* InterfaceControllerLivros.swift */; };
+		D7DF9E6421C420C70018B3EA /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E6321C420C70018B3EA /* RowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerRelogio.swift; sourceTree = "<group>"; };
 		D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerGravador.swift; sourceTree = "<group>"; };
 		D7DF9E5D21C2EC690018B3EA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D7DF9E5F21C41FF40018B3EA /* InterfaceControllerLivros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerLivros.swift; sourceTree = "<group>"; };
+		D7DF9E6321C420C70018B3EA /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,9 +203,11 @@
 			isa = PBXGroup;
 			children = (
 				D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */,
-				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
 				D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */,
 				D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */,
+				D7DF9E5F21C41FF40018B3EA /* InterfaceControllerLivros.swift */,
+				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
+				D7DF9E6321C420C70018B3EA /* RowController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,6 +372,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DF9E3E21C1AAF30018B3EA /* NotificationController.swift in Sources */,
+				D7DF9E6021C41FF40018B3EA /* InterfaceControllerLivros.swift in Sources */,
+				D7DF9E6421C420C70018B3EA /* RowController.swift in Sources */,
 				D7DF9E5E21C2EC690018B3EA /* Extensions.swift in Sources */,
 				D7DF9E3C21C1AAF30018B3EA /* ExtensionDelegate.swift in Sources */,
 				D7DF9E5A21C2D5700018B3EA /* InterfaceControllerRelogio.swift in Sources */,

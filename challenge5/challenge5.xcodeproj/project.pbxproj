@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41C855321C41BA20018380D /* Livro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C41C855121C41BA20018380D /* Livro.xcdatamodeld */; };
+		C41C855521C41BDF0018380D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855421C41BDF0018380D /* CoreData.swift */; };
+		C41C855721C41CF80018380D /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855621C41CF80018380D /* Livro.swift */; };
 		D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */; };
 		D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1821C1AAF10018B3EA /* ViewController.swift */; };
 		D7DF9E1C21C1AAF10018B3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C41C855221C41BA20018380D /* Livro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livro.xcdatamodel; sourceTree = "<group>"; };
+		C41C855421C41BDF0018380D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		C41C855621C41CF80018380D /* Livro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
 		D7DF9E1321C1AAF10018B3EA /* challenge5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challenge5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DF9E1821C1AAF10018B3EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 		D7DF9E5021C260F80018B3EA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */,
 				D7DF9E1821C1AAF10018B3EA /* ViewController.swift */,
 			);
 			path = Controller;
@@ -181,7 +188,9 @@
 		D7DF9E5221C261120018B3EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */,
+				C41C855121C41BA20018380D /* Livro.xcdatamodeld */,
+				C41C855421C41BDF0018380D /* CoreData.swift */,
+				C41C855621C41CF80018380D /* Livro.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,8 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41C855521C41BDF0018380D /* CoreData.swift in Sources */,
+				C41C855321C41BA20018380D /* Livro.xcdatamodeld in Sources */,
 				D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */,
 				D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */,
+				C41C855721C41CF80018380D /* Livro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = "challenge5 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = "challenge5 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +595,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				IBSC_MODULE = challenge5_WatchKit_Extension;
 				INFOPLIST_FILE = "challenge5 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.academymistic.challenge5.watchkitapp;
@@ -602,7 +614,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				IBSC_MODULE = challenge5_WatchKit_Extension;
 				INFOPLIST_FILE = "challenge5 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.academymistic.challenge5.watchkitapp;
@@ -620,7 +632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = challenge5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,7 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = challenge5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,6 +703,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C41C855121C41BA20018380D /* Livro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C41C855221C41BA20018380D /* Livro.xcdatamodel */,
+			);
+			currentVersion = C41C855221C41BA20018380D /* Livro.xcdatamodel */;
+			path = Livro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D7DF9E0B21C1AAF10018B3EA /* Project object */;
 }

@@ -43,7 +43,10 @@ class InterfaceControllerLivros: WKInterfaceController {
                 rowController.rowLabel.setText(rowModel)
             }
         }
-        
     }
     
+    internal override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        pushController(withName: "InterfaceControllerGravador", context: tableData[rowIndex])
+        
+    }
 }

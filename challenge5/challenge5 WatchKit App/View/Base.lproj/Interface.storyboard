@@ -93,20 +93,26 @@
                         <label width="136" alignment="left" text="Gostaria de ouvir o último resumo?" textAlignment="justified" numberOfLines="0" id="OcC-AD-zwJ">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <button alignment="center" verticalAlignment="center" backgroundImage="Image" id="NDB-5A-OxO">
+                        <button height="53" alignment="center" verticalAlignment="center" backgroundImage="Image" id="NDB-5A-OxO">
                             <connections>
                                 <action selector="btGravador" destination="BCI-Xf-2F0" id="WKc-rt-wVR"/>
                             </connections>
                         </button>
+                        <label alignment="center" text="Livro" id="Zeb-KB-kDa">
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y">
                             <connections>
                                 <segue destination="2fL-04-f34" kind="push" id="sfA-td-qLo"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="labelLivro" destination="Zeb-KB-kDa" id="J3z-Ah-Ypj"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="552" y="345"/>
+            <point key="canvasLocation" x="552" y="343"/>
         </scene>
     </scenes>
 </document>

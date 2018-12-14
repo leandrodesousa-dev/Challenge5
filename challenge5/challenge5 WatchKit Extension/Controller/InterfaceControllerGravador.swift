@@ -13,6 +13,7 @@ import Foundation
 class InterfaceControllerGravador: WKInterfaceController {
 
     
+    @IBOutlet weak var labelLivro: WKInterfaceLabel!
     
     //Botoes
     @IBAction func btGravador() {
@@ -35,6 +36,9 @@ class InterfaceControllerGravador: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        if let detailData = context as? String{
+            
+        }
         // Configure interface objects here.
     }
 

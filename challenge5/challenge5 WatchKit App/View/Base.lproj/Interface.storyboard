@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="564" y="735"/>
         </scene>
-        <!--Interface Controller Gravador-->
+        <!--InterfaceControllerGravador-->
         <scene sceneID="2WY-9r-GVE">
             <objects>
-                <controller id="BCI-Xf-2F0" customClass="InterfaceControllerGravador" customModule="challenge5_WatchKit_Extension">
+                <controller identifier="InterfaceControllerGravador" id="BCI-Xf-2F0" customClass="InterfaceControllerGravador" customModule="challenge5_WatchKit_Extension">
                     <items>
                         <label width="136" alignment="left" text="Gostaria de ouvir o último resumo?" textAlignment="justified" numberOfLines="0" id="OcC-AD-zwJ">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>

@@ -37,7 +37,7 @@ class InterfaceControllerGravador: WKInterfaceController {
         super.awake(withContext: context)
         
         if let detailData = context as? String{
-            
+            labelLivro.setText(detailData)
         }
         // Configure interface objects here.
     }

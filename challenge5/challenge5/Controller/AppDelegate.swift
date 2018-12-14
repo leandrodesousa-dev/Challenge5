@@ -41,7 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        <#code#>
+        //receber
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

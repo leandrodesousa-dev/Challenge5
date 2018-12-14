@@ -26,7 +26,6 @@ func initCoreData(){
 }
 
 func saveCoreData(image: UIImage?, titulo: String, paginas: Int){
-    print("dtsr")
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
     
     let managedContext = appDelegate.persistentContainer.viewContext

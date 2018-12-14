@@ -211,6 +211,7 @@
 		D7DF9E5421C2614F0018B3EA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */,
 				D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */,
 				D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */,
 				D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */,
@@ -232,7 +233,6 @@
 		D7DF9E5621C261640018B3EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */,
 				D7DF9E4221C1AAF40018B3EA /* PushNotificationPayload.apns */,
 				D7DF9E5D21C2EC690018B3EA /* Extensions.swift */,
 			);

@@ -28,11 +28,6 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Ler" id="AXa-Gh-N8a">
-                            <connections>
-                                <segue destination="BCI-Xf-2F0" kind="push" id="bxs-Hb-CtE"/>
-                            </connections>
-                        </button>
                     </items>
                     <connections>
                         <outlet property="tableView" destination="L9I-1F-nEv" id="GQn-dt-OqX"/>

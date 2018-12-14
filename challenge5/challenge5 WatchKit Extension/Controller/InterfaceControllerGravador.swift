@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceControllerGravador: WKInterfaceController {
 
+    
+    
     //Botoes
     @IBAction func btGravador() {
         let oi = WKAudioRecorderPreset.narrowBandSpeech

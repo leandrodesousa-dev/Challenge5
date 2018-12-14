@@ -215,8 +215,8 @@
 				D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */,
 				D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */,
 				D7DF9E5F21C41FF40018B3EA /* InterfaceControllerLivros.swift */,
-				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
 				D7DF9E6321C420C70018B3EA /* RowController.swift */,
+				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

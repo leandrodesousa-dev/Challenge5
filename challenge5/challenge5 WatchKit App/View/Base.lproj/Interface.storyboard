@@ -16,12 +16,15 @@
                     <items>
                         <table alignment="left" id="L9I-1F-nEv">
                             <items>
-                                <tableRow id="8hM-Tu-QSD" customClass="RowController" customModule="challenge5_WatchKit_Extension">
+                                <tableRow identifier="RowController" id="8hM-Tu-QSD" customClass="RowController" customModule="challenge5_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="K5d-Oy-Huv">
                                         <items>
                                             <label alignment="center" verticalAlignment="center" text="Label" id="NKV-Zn-K4r"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="NKV-Zn-K4r" id="c5G-Vj-gYu"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

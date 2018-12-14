@@ -10,4 +10,11 @@ import WatchKit
 
 class RowController: NSObject {
 
+    //Label titulo
+    @IBOutlet weak var rowLabel: WKInterfaceLabel!
+    
+    
+    
+    
+    
 }

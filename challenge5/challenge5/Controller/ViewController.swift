@@ -8,22 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
 
-    @IBOutlet weak var titulo: UITextField!
-    @IBOutlet weak var paginas: UITextField!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let livros = ["Livro1","Livro2","Livro3"]
+    
+    let livrosImage: [UIImage] = [
+    UIImage(named: "livro_exemplo_1")!,
+    UIImage(named: "livro_exemplo_2")!,
+    UIImage(named: "livro_exemplo_3")!,
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+//        collectionView.dataSource = self
+//        collectionView.delegate = self
+//        
         initCoreData()
         
     }
 
-    @IBAction func ENVIAR(_ sender: Any) {
-        saveCoreData(image: nil, titulo: titulo.text!, paginas: Int(paginas.text!) ?? 0)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return livros.count
+    }
+  
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
         
+        cell.nomedoLivro.text = livros[indexPath.item]
+        cell.livro1.image = livrosImage[indexPath.item]
+        
+        return cell
     }
     
 }

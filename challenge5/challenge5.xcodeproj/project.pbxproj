@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C41C855321C41BA20018380D /* Livro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C41C855121C41BA20018380D /* Livro.xcdatamodeld */; };
 		C41C855521C41BDF0018380D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855421C41BDF0018380D /* CoreData.swift */; };
 		C41C855721C41CF80018380D /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855621C41CF80018380D /* Livro.swift */; };
+		C4207CA121C9728000DB891E /* Livros.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4207C9F21C9728000DB891E /* Livros.xcdatamodeld */; };
 		C430AE9F21C93D080066BD2E /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AE9E21C93D080066BD2E /* Lista.swift */; };
 		C430AEA121C9419D0066BD2E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA021C9419D0066BD2E /* Notification.swift */; };
+		C430AEA621C96A710066BD2E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA521C96A710066BD2E /* Notifications.swift */; };
 		D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73419A821C81FFA00091795 /* CollectionViewCellController.swift */; };
 		D7C3BCEF21C8E8A000AE5F7C /* viewControlerAddLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */; };
 		D7C3BCF121C9665E00AE5F7C /* listadeLiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */; };
@@ -78,11 +79,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C41C855221C41BA20018380D /* Livro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livro.xcdatamodel; sourceTree = "<group>"; };
 		C41C855421C41BDF0018380D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		C41C855621C41CF80018380D /* Livro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
+		C4207CA021C9728000DB891E /* Livros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livros.xcdatamodel; sourceTree = "<group>"; };
 		C430AE9E21C93D080066BD2E /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		C430AEA021C9419D0066BD2E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		C430AEA521C96A710066BD2E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		D73419A821C81FFA00091795 /* CollectionViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellController.swift; sourceTree = "<group>"; };
 		D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControlerAddLivros.swift; sourceTree = "<group>"; };
 		D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listadeLiv.swift; sourceTree = "<group>"; };
@@ -204,10 +206,11 @@
 		D7DF9E5221C261120018B3EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C41C855121C41BA20018380D /* Livro.xcdatamodeld */,
 				C41C855421C41BDF0018380D /* CoreData.swift */,
 				C41C855621C41CF80018380D /* Livro.swift */,
 				D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */,
+				C430AEA521C96A710066BD2E /* Notifications.swift */,
+				C4207C9F21C9728000DB891E /* Livros.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,8 +389,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C430AEA621C96A710066BD2E /* Notifications.swift in Sources */,
 				C41C855521C41BDF0018380D /* CoreData.swift in Sources */,
-				C41C855321C41BA20018380D /* Livro.xcdatamodeld in Sources */,
+				C4207CA121C9728000DB891E /* Livros.xcdatamodeld in Sources */,
 				D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */,
 				D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */,
 				D7C3BCF121C9665E00AE5F7C /* listadeLiv.swift in Sources */,
@@ -733,13 +737,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C41C855121C41BA20018380D /* Livro.xcdatamodeld */ = {
+		C4207C9F21C9728000DB891E /* Livros.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C41C855221C41BA20018380D /* Livro.xcdatamodel */,
+				C4207CA021C9728000DB891E /* Livros.xcdatamodel */,
 			);
-			currentVersion = C41C855221C41BA20018380D /* Livro.xcdatamodel */;
-			path = Livro.xcdatamodeld;
+			currentVersion = C4207CA021C9728000DB891E /* Livros.xcdatamodel */;
+			path = Livros.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

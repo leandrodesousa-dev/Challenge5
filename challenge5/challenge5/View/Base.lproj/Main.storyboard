@@ -91,7 +91,7 @@
                     <navigationItem key="navigationItem" id="92O-QF-MHv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JnC-Ft-YxB">
                             <connections>
-                                <segue destination="jZM-TQ-kam" kind="show" id="y3x-EK-3Le"/>
+                                <segue destination="jZM-TQ-kam" kind="show" id="DSf-JG-nzK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-e7-oo4">
-                                <rect key="frame" x="51" y="430" width="287" height="30"/>
+                                <rect key="frame" x="51" y="429" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -166,6 +166,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="Paginas" destination="3pW-ac-gXK" id="cix-h8-3ei"/>
+                        <outlet property="tituloLabel" destination="MfP-e7-oo4" id="YSZ-Gl-WsO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UF-Zb-Tei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,8 +24,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        lista = userInfo[""] as! [String]
-        NotificationCenter.default.post(name: notificacaoDeRecebimentoDeFilmes, object: nil)
+        lista = userInfo[""] as? [String] ?? []
+        NotificationCenter.default.post(name: notificacaoDeRecebimentoDeLivro, object: nil)
     }
 
     func applicationDidBecomeActive() {

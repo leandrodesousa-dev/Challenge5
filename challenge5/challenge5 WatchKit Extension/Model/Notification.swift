@@ -8,4 +8,4 @@
 
 import Foundation
 
-let notificacaoDeRecebimentoDeFilmes = Notification.Name("com.academymistic.challenge5.recebimentoDeFilme")
+let notificacaoDeRecebimentoDeLivro = Notification.Name("com.academymistic.challenge5.recebimentoDeLivro")

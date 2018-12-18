@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //activation
+        
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -76,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Livro")
+        let container = NSPersistentContainer(name: "Livros")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

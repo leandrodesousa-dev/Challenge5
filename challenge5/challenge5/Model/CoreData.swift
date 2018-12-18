@@ -16,7 +16,7 @@ func initCoreData(){
     }
     let managedContext = appDelegate.persistentContainer.viewContext
     
-    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Livro")
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Livros")
     
     do {
         livros = try managedContext.fetch(fetchRequest)
@@ -30,15 +30,17 @@ func saveCoreData(image: UIImage?, titulo: String, paginas: Int){
     
     let managedContext = appDelegate.persistentContainer.viewContext
     
-    let entidade = NSEntityDescription.entity(forEntityName: "Livro", in: managedContext)!
+    let entidade = NSEntityDescription.entity(forEntityName: "Livros", in: managedContext)!
     
     let livroSave = NSManagedObject(entity: entidade, insertInto: managedContext)
     
     livroSave.setValue(titulo, forKey: "title")
+    livroSave.setValue(paginas, forKey: "pagina")
     
     do{
         try managedContext.save()
         livros.append(livroSave)
+        NotificationCenter.default.post(name: notificacaoDeCadastroDeLivro, object: nil, userInfo: nil)
     } catch let error as NSError {
         print("Não consegui salvar. \(error), \(error.userInfo)")
     }

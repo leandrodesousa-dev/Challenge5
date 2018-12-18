@@ -126,6 +126,9 @@
                                 <rect key="frame" x="119" y="162" width="136" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="botao_adicionar_imagem" backgroundImage="fundo_adicionar_imagem"/>
+                                <connections>
+                                    <action selector="galeriaBt:" destination="jZM-TQ-kam" eventType="touchUpInside" id="UW3-eU-lzl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trA-Ae-kAg">
                                 <rect key="frame" x="166" y="394" width="43" height="21"/>
@@ -168,6 +171,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Paginas" destination="3pW-ac-gXK" id="cix-h8-3ei"/>
+                        <outlet property="galeriaOut" destination="NfZ-aZ-l7H" id="BR5-17-5rp"/>
                         <outlet property="tituloLabel" destination="MfP-e7-oo4" id="YSZ-Gl-WsO"/>
                     </connections>
                 </viewController>

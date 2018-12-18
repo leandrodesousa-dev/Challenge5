@@ -22,7 +22,7 @@ class viewControlerAddLivros: UIViewController {
     @IBAction func salvarLivros(_ sender: Any) {
         
         saveCoreData(image: nil, titulo: tituloLabel.text!, paginas: Int(Paginas.text!)!)
-       
+       sendContext()
         navigationController?.popViewController(animated: true)
         
     }

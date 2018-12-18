@@ -21,8 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         //navigationController?.isNavigationBarHidden = true
         initCoreData()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.notificacaoDerecebimento(_:)), name: notificacaoDeCadastroDeLivro, object: nil)
-        let titulos = [livros[0].value(forKey: "title") as! String]
-        WCSession.default.transferUserInfo(["":titulos])
+        sendContext()
     }
     
     deinit {

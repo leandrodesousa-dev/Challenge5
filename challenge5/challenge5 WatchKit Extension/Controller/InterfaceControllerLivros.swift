@@ -22,7 +22,7 @@ class InterfaceControllerLivros: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         loadTableData()
-        NotificationCenter.default.addObserver(self, selector: #selector(InterfaceControllerLivros.notificacaoDerecebimento(_:)), name: notificacaoDeRecebimentoDeFilmes, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(InterfaceControllerLivros.notificacaoDerecebimento(_:)), name: notificacaoDeRecebimentoDeLivro, object: nil)
         // Configure interface objects here.
     }
 

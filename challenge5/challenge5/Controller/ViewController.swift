@@ -31,7 +31,13 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     //  setupNavigationBarItem()
         
         initCoreData()
-        WCSession.default.transferUserInfo(["":liv])
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.notificacaoDerecebimento(_:)), name: notificacaoDeCadastroDeLivro, object: nil)
+        let titulos = [livros[0].value(forKey: "title") as! String]
+        WCSession.default.transferUserInfo(["":titulos])
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     
@@ -45,16 +51,24 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
 //    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return liv.count
+        return livros.count
     }
   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
         
-        cell.nomedoLivro.text = liv[indexPath.item]
-        cell.livro1.image = livImage[indexPath.item]
+        cell.nomedoLivro.text = livros[indexPath.item].value(forKey: "title") as? String
+        cell.livro1.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
         
         return cell
+    }
+    
+    @objc private func notificacaoDerecebimento(_ notification: Notification){
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+        
     }
    
 }

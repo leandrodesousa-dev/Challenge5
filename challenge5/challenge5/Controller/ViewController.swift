@@ -29,7 +29,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         // Do any additional setup after loading the view, typically from a nib.
 
     //  setupNavigationBarItem()
-        
+        navigationController?.isNavigationBarHidden = true
         initCoreData()
         WCSession.default.transferUserInfo(["":liv])
     }

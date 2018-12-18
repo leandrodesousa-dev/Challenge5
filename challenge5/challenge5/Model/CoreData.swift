@@ -32,13 +32,13 @@ func saveCoreData(image: UIImage?, titulo: String, paginas: Int){
     
     let entidade = NSEntityDescription.entity(forEntityName: "Livro", in: managedContext)!
     
-    let objetosSupermercados = NSManagedObject(entity: entidade, insertInto: managedContext)
+    let livroSave = NSManagedObject(entity: entidade, insertInto: managedContext)
     
-    objetosSupermercados.setValue(titulo, forKey: "title")
+    livroSave.setValue(titulo, forKey: "title")
     
     do{
         try managedContext.save()
-        livros.append(objetosSupermercados)
+        livros.append(livroSave)
     } catch let error as NSError {
         print("Não consegui salvar. \(error), \(error.userInfo)")
     }

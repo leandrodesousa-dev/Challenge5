@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let livros = ["Livro1","Livro2","Livro3"]
+    let liv = ["Livro1","Livro2","Livro3"]
     
-    let livrosImage: [UIImage] = [
+    let livImage: [UIImage] = [
     UIImage(named: "livro_exemplo_1")!,
     UIImage(named: "livro_exemplo_2")!,
     UIImage(named: "livro_exemplo_3")!,
@@ -27,18 +28,18 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
 //        collectionView.delegate = self
 //        
         initCoreData()
-        
+        WCSession.default.transferUserInfo(["":liv])
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return livros.count
+        return liv.count
     }
   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
         
-        cell.nomedoLivro.text = livros[indexPath.item]
-        cell.livro1.image = livrosImage[indexPath.item]
+        cell.nomedoLivro.text = liv[indexPath.item]
+        cell.livro1.image = livImage[indexPath.item]
         
         return cell
     }

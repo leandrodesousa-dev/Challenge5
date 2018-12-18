@@ -17,6 +17,8 @@
 		D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73419A821C81FFA00091795 /* CollectionViewCellController.swift */; };
 		D7C3BCEF21C8E8A000AE5F7C /* viewControlerAddLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */; };
 		D7C3BCF121C9665E00AE5F7C /* listadeLiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */; };
+		D7C3BCF321C98BFF00AE5F7C /* LivrosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF221C98BFF00AE5F7C /* LivrosTableViewCell.swift */; };
+		D7C3BCF521C990B700AE5F7C /* CronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */; };
 		D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */; };
 		D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1821C1AAF10018B3EA /* ViewController.swift */; };
 		D7DF9E1C21C1AAF10018B3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */; };
@@ -90,6 +92,8 @@
 		D73419A821C81FFA00091795 /* CollectionViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellController.swift; sourceTree = "<group>"; };
 		D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControlerAddLivros.swift; sourceTree = "<group>"; };
 		D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listadeLiv.swift; sourceTree = "<group>"; };
+		D7C3BCF221C98BFF00AE5F7C /* LivrosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivrosTableViewCell.swift; sourceTree = "<group>"; };
+		D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronogramaViewController.swift; sourceTree = "<group>"; };
 		D7DF9E1321C1AAF10018B3EA /* challenge5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challenge5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DF9E1821C1AAF10018B3EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				D7DF9E1821C1AAF10018B3EA /* ViewController.swift */,
 				D73419A821C81FFA00091795 /* CollectionViewCellController.swift */,
 				D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */,
+				D7C3BCF221C98BFF00AE5F7C /* LivrosTableViewCell.swift */,
+				D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,9 +399,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C430AEA621C96A710066BD2E /* Notifications.swift in Sources */,
+				D7C3BCF321C98BFF00AE5F7C /* LivrosTableViewCell.swift in Sources */,
 				C41C855521C41BDF0018380D /* CoreData.swift in Sources */,
 				C4207CA121C9728000DB891E /* Livros.xcdatamodeld in Sources */,
 				D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */,
+				D7C3BCF521C990B700AE5F7C /* CronogramaViewController.swift in Sources */,
 				D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */,
 				D7C3BCF121C9665E00AE5F7C /* listadeLiv.swift in Sources */,
 				D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */,

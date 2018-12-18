@@ -16,9 +16,9 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     var proLeitura = 0.0
     
     
-    let livros = ["Killing Comendatore","Ensaio sobre a cegueira","Outsider"]
+    let liv = ["Killing Comendatore","Ensaio sobre a cegueira","Outsider"]
     
-    let livrosImage: [UIImage] = [
+    let livImage: [UIImage] = [
     UIImage(named: "livro_exemplo_1")!,
     UIImage(named: "livro_exemplo_2")!,
     UIImage(named: "livro_exemplo_3")!,
@@ -51,8 +51,8 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
         
-        cell.nomedoLivro.text = livros[indexPath.item]
-        cell.livro1.image = livrosImage[indexPath.item]
+        cell.nomedoLivro.text = liv[indexPath.item]
+        cell.livro1.image = livImage[indexPath.item]
         
         return cell
     }

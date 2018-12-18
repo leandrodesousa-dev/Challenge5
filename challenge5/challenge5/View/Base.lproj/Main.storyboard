@@ -101,12 +101,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="132.68365817091455"/>
+            <point key="canvasLocation" x="833" y="103"/>
         </scene>
         <!--View Controler Add Livros-->
         <scene sceneID="LOd-aN-m9H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2UF-Zb-Tei" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jZM-TQ-kam" customClass="viewControlerAddLivros" customModule="challenge5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KW2-lg-aOc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -168,6 +167,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2UF-Zb-Tei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="833" y="902"/>
         </scene>

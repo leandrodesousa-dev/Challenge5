@@ -17,13 +17,8 @@ class viewControlerAddLivros: UIViewController {
     
     @IBAction func salvarLivros(_ sender: Any) {
    
-        let salvarLivrosOk = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        guard let mainNavigationVC = salvarLivrosOk.instantiateViewController(withIdentifier: "ViewController") as? ViewController else{
-            return
-        }
-        
-        present(mainNavigationVC, animated: true, completion: nil)
+       
+        navigationController?.popViewController(animated: true)
         
     }
     

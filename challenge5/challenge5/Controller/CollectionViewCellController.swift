@@ -14,6 +14,7 @@ class CollectionViewCellController: UICollectionViewCell {
     @IBOutlet weak var livro1: UIImageView!
     @IBOutlet weak var nomedoLivro: UILabel!
     
+    @IBOutlet weak var progressLeitura: UIProgressView!
     
     
 }

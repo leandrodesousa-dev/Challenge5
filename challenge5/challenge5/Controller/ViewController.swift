@@ -13,9 +13,12 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let liv = ["Livro1","Livro2","Livro3"]
+    var proLeitura = 0.0
     
-    let livImage: [UIImage] = [
+    
+    let livros = ["Killing Comendatore","Ensaio sobre a cegueira","Outsider"]
+    
+    let livrosImage: [UIImage] = [
     UIImage(named: "livro_exemplo_1")!,
     UIImage(named: "livro_exemplo_2")!,
     UIImage(named: "livro_exemplo_3")!,
@@ -24,12 +27,22 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
-//        
+
+    //  setupNavigationBarItem()
+        
         initCoreData()
         WCSession.default.transferUserInfo(["":liv])
     }
+    
+    
+    
+//    private func setupNavigationBarItem(){
+//    let addLivros = UIButton(type: .system)
+//        addLivros.setImage(UIImage(named: "botao_adicionar_imagem"), for: .normal)
+//        addLivros.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addLivros)
+//
+//    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return liv.count
@@ -38,11 +51,11 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
         
-        cell.nomedoLivro.text = liv[indexPath.item]
-        cell.livro1.image = livImage[indexPath.item]
+        cell.nomedoLivro.text = livros[indexPath.item]
+        cell.livro1.image = livrosImage[indexPath.item]
         
         return cell
     }
-    
+   
 }
 

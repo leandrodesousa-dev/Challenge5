@@ -14,36 +14,15 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     @IBOutlet weak var collectionView: UICollectionView!
     
     var proLeitura = 0.0
-    
-    
-    let liv = ["Killing Comendatore","Ensaio sobre a cegueira","Outsider"]
-    
-    let livImage: [UIImage] = [
-    UIImage(named: "livro_exemplo_1")!,
-    UIImage(named: "livro_exemplo_2")!,
-    UIImage(named: "livro_exemplo_3")!,
-    ]
-    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-    //  setupNavigationBarItem()
-        navigationController?.isNavigationBarHidden = true
+  
+        //navigationController?.isNavigationBarHidden = true
         initCoreData()
         WCSession.default.transferUserInfo(["":liv])
     }
     
-    
-    
-//    private func setupNavigationBarItem(){
-//    let addLivros = UIButton(type: .system)
-//        addLivros.setImage(UIImage(named: "botao_adicionar_imagem"), for: .normal)
-//        addLivros.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addLivros)
-//
-//    }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return liv.count
     }

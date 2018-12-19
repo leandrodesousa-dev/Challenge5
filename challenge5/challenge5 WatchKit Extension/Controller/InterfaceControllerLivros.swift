@@ -22,6 +22,9 @@ class InterfaceControllerLivros: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         loadTableData()
+        var coiso = ["","","","",""]
+        coiso.append("")
+        print(coiso.count)
         NotificationCenter.default.addObserver(self, selector: #selector(InterfaceControllerLivros.notificacaoDerecebimento(_:)), name: notificacaoDeRecebimentoDeLivro, object: nil)
         // Configure interface objects here.
     }
@@ -51,8 +54,7 @@ class InterfaceControllerLivros: WKInterfaceController {
     }
     
     internal override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        pushController(withName: "InterfaceControllerRelogio", context: rowIndex)
-        
+        pushController(withName: "InterfaceControllerGravador", context: ["0":rowIndex, "1":listaTitulo[rowIndex],"2":listaAtual[rowIndex],"3":listaPaginas[rowIndex],"5":listaAudio[rowIndex]])
     }
     
     @objc private func notificacaoDerecebimento(_ notification: Notification){

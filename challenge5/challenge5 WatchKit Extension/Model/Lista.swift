@@ -11,4 +11,5 @@ import Foundation
 var listaTitulo : [String] = []
 var listaAtual : [Int] = []
 var listaPaginas : [Int] = []
-var listaImagens : [Data] = []
+//var listaImagens : [Data] = []
+var listaAudio : [String] = []

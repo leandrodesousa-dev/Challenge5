@@ -19,6 +19,9 @@ class InterfaceControllerRelogio: WKInterfaceController {
     var minutos = 0
     var horas = 0
     
+    //Context
+    var index = 0
+    
     //Outlet da label e botões
     
     @IBOutlet weak var LabelRelogio: WKInterfaceLabel!
@@ -42,7 +45,7 @@ class InterfaceControllerRelogio: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        index = context as! Int
         // Configure interface objects here.
     }
 

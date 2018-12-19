@@ -24,7 +24,10 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        lista = userInfo[""] as? [String] ?? []
+        listaTitulo = userInfo["1"] as? [String] ?? []
+        listaAtual = userInfo["2"] as? [Int] ?? []
+        listaPaginas = userInfo["3"] as? [Int] ?? []
+        //listaImagens = userInfo["4"] as? [Data] ?? []
         NotificationCenter.default.post(name: notificacaoDeRecebimentoDeLivro, object: nil)
     }
 

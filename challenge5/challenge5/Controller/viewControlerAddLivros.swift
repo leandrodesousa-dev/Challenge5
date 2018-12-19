@@ -20,14 +20,12 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
     
     
     override func viewDidLoad() {
-        print("foi\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
         super.viewDidLoad()
     }
     
     @IBAction func salvarLivros(_ sender: Any) {
-        
-        saveCoreData(image: nil, titulo: tituloLabel.text!, paginas: Int(Paginas.text!)!)
-       sendContext()
+        saveCoreData(image: galeriaOut!.imageView?.image, titulo: tituloLabel.text!, paginas: Int(Paginas.text!)!)
+        sendContext()
         navigationController?.popViewController(animated: true)
     }
     
@@ -49,9 +47,5 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
           dismiss(animated: true, completion: nil)
         
     }
-    
-  
-    
-    
     
 }

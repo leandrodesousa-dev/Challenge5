@@ -39,17 +39,19 @@ class InterfaceControllerLivros: WKInterfaceController {
 
     private func loadTableData() {
         
-        tableView.setNumberOfRows(lista.count, withRowType: "RowController")
+        tableView.setNumberOfRows(listaTitulo.count, withRowType: "RowController")
         
-        for (index,rowModel) in lista.enumerated(){
+        for (index,rowModel) in listaTitulo.enumerated(){
             if let rowController = tableView.rowController(at: index) as? RowController{
                 rowController.rowLabel.setText(rowModel)
+                //rowController.imageBook.setImageData(listaImagens[index])
+                rowController.progressoLabel.setText("\(listaAtual[index])/\(listaPaginas[index])")
             }
         }
     }
     
     internal override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        pushController(withName: "InterfaceControllerGravador", context: lista[rowIndex])
+        pushController(withName: "InterfaceControllerRelogio", context: rowIndex)
         
     }
     

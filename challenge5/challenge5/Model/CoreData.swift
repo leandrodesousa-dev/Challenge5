@@ -36,6 +36,7 @@ func saveCoreData(image: UIImage?, titulo: String, paginas: Int){
     
     livroSave.setValue(titulo, forKey: "title")
     livroSave.setValue(paginas, forKey: "pagina")
+    livroSave.setValue(image?.pngData(), forKey: "image")
     
     do{
         try managedContext.save()

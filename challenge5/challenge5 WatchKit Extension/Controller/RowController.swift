@@ -12,9 +12,7 @@ class RowController: NSObject {
 
     //Label titulo
     @IBOutlet weak var rowLabel: WKInterfaceLabel!
-    
-    
-    
-    
+    @IBOutlet weak var imageBook: WKInterfaceImage!
+    @IBOutlet weak var progressoLabel: WKInterfaceLabel!
     
 }

@@ -8,4 +8,7 @@
 
 import Foundation
 
-var lista : [String] = []
+var listaTitulo : [String] = []
+var listaAtual : [Int] = []
+var listaPaginas : [Int] = []
+var listaImagens : [Data] = []

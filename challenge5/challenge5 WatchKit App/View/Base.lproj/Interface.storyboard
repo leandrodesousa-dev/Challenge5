@@ -9,20 +9,33 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller Livros-->
+        <!--Livros-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceControllerLivros" customModule="challenge5_WatchKit_Extension">
+                <controller title="Livros" id="AgC-eL-Hgc" customClass="InterfaceControllerLivros" customModule="challenge5_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="L9I-1F-nEv">
+                        <table alignment="left" verticalAlignment="center" id="L9I-1F-nEv">
                             <items>
                                 <tableRow identifier="RowController" id="8hM-Tu-QSD" customClass="RowController" customModule="challenge5_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="K5d-Oy-Huv">
+                                    <group key="rootItem" width="1" height="1" alignment="left" layout="overlap" id="K5d-Oy-Huv">
                                         <items>
-                                            <label alignment="center" verticalAlignment="center" text="Label" id="NKV-Zn-K4r"/>
+                                            <group width="1" height="0.69999999999999996" alignment="center" verticalAlignment="center" layout="overlap" id="KjC-Rx-CIR">
+                                                <items>
+                                                    <imageView width="1" height="1" alignment="center" verticalAlignment="center" id="XVJ-CM-qjj"/>
+                                                    <imageView width="1" height="1" alignment="left" id="aRf-F9-rv3"/>
+                                                </items>
+                                            </group>
+                                            <label height="0.14999999999999999" alignment="center" text="Label" id="NKV-Zn-K4r">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                            <label height="0.14999999999999999" alignment="center" verticalAlignment="bottom" text="Label" id="cUQ-V7-eio">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
+                                        <outlet property="imageBook" destination="XVJ-CM-qjj" id="8Fh-3G-hVc"/>
+                                        <outlet property="progressoLabel" destination="cUQ-V7-eio" id="WFa-rC-yK5"/>
                                         <outlet property="rowLabel" destination="NKV-Zn-K4r" id="c5G-Vj-gYu"/>
                                     </connections>
                                 </tableRow>
@@ -101,11 +114,7 @@
                         <label alignment="center" text="Livro" id="Zeb-KB-kDa">
                             <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y">
-                            <connections>
-                                <segue destination="2fL-04-f34" kind="push" id="sfA-td-qLo"/>
-                            </connections>
-                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y"/>
                     </items>
                     <connections>
                         <outlet property="labelLivro" destination="Zeb-KB-kDa" id="J3z-Ah-Ypj"/>

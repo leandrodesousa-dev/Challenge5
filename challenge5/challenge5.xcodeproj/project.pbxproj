@@ -594,7 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = "challenge5 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -616,7 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = "challenge5 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -639,7 +639,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				IBSC_MODULE = challenge5_WatchKit_Extension;
 				INFOPLIST_FILE = "challenge5 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.academymistic.challenge5.watchkitapp;
@@ -658,7 +658,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				IBSC_MODULE = challenge5_WatchKit_Extension;
 				INFOPLIST_FILE = "challenge5 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.academymistic.challenge5.watchkitapp;
@@ -676,7 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = challenge5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -694,7 +694,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQG7HAF33B;
+				DEVELOPMENT_TEAM = 3D55XU73LF;
 				INFOPLIST_FILE = challenge5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

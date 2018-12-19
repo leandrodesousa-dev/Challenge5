@@ -21,6 +21,8 @@
 		D7C3BCF521C990B700AE5F7C /* CronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */; };
 		D7C3BCF721C9F89F00AE5F7C /* CustomCronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF621C9F89F00AE5F7C /* CustomCronogramaViewController.swift */; };
 		D7C3BCF921C9F93000AE5F7C /* CustomLivrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF821C9F93000AE5F7C /* CustomLivrosViewController.swift */; };
+		D7C3BCFB21C9FFBB00AE5F7C /* DespetadorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCFA21C9FFBB00AE5F7C /* DespetadorViewController.swift */; };
+		D7C3BD0321CABF9400AE5F7C /* AlertaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BD0221CABF9400AE5F7C /* AlertaViewController.swift */; };
 		D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */; };
 		D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1821C1AAF10018B3EA /* ViewController.swift */; };
 		D7DF9E1C21C1AAF10018B3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */; };
@@ -98,6 +100,8 @@
 		D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronogramaViewController.swift; sourceTree = "<group>"; };
 		D7C3BCF621C9F89F00AE5F7C /* CustomCronogramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCronogramaViewController.swift; sourceTree = "<group>"; };
 		D7C3BCF821C9F93000AE5F7C /* CustomLivrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLivrosViewController.swift; sourceTree = "<group>"; };
+		D7C3BCFA21C9FFBB00AE5F7C /* DespetadorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespetadorViewController.swift; sourceTree = "<group>"; };
+		D7C3BD0221CABF9400AE5F7C /* AlertaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaViewController.swift; sourceTree = "<group>"; };
 		D7DF9E1321C1AAF10018B3EA /* challenge5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challenge5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DF9E1821C1AAF10018B3EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7C3BCFC21CABE9100AE5F7C /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D7C3BCF621C9F89F00AE5F7C /* CustomCronogramaViewController.swift */,
+				D7C3BCF821C9F93000AE5F7C /* CustomLivrosViewController.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		D7C3BCFE21CABF0800AE5F7C /* Tela 1 */ = {
+			isa = PBXGroup;
+			children = (
+				D7DF9E1821C1AAF10018B3EA /* ViewController.swift */,
+				D7C3BCF221C98BFF00AE5F7C /* LivrosTableViewCell.swift */,
+				D73419A821C81FFA00091795 /* CollectionViewCellController.swift */,
+			);
+			path = "Tela 1";
+			sourceTree = "<group>";
+		};
+		D7C3BCFF21CABF3B00AE5F7C /* Tela 2 */ = {
+			isa = PBXGroup;
+			children = (
+				D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */,
+			);
+			path = "Tela 2";
+			sourceTree = "<group>";
+		};
+		D7C3BD0021CABF5D00AE5F7C /* Tela 3 */ = {
+			isa = PBXGroup;
+			children = (
+				D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */,
+			);
+			path = "Tela 3";
+			sourceTree = "<group>";
+		};
+		D7C3BD0121CABF7500AE5F7C /* Tela 4 */ = {
+			isa = PBXGroup;
+			children = (
+				D7C3BD0221CABF9400AE5F7C /* AlertaViewController.swift */,
+			);
+			path = "Tela 4";
+			sourceTree = "<group>";
+		};
 		D7DF9E0A21C1AAF10018B3EA = {
 			isa = PBXGroup;
 			children = (
@@ -195,14 +242,13 @@
 		D7DF9E5021C260F80018B3EA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D7C3BCFE21CABF0800AE5F7C /* Tela 1 */,
+				D7C3BCFF21CABF3B00AE5F7C /* Tela 2 */,
+				D7C3BD0021CABF5D00AE5F7C /* Tela 3 */,
+				D7C3BD0121CABF7500AE5F7C /* Tela 4 */,
+				D7C3BCFC21CABE9100AE5F7C /* Custom */,
 				D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */,
-				D7DF9E1821C1AAF10018B3EA /* ViewController.swift */,
-				D73419A821C81FFA00091795 /* CollectionViewCellController.swift */,
-				D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */,
-				D7C3BCF221C98BFF00AE5F7C /* LivrosTableViewCell.swift */,
-				D7C3BCF421C990B700AE5F7C /* CronogramaViewController.swift */,
-				D7C3BCF621C9F89F00AE5F7C /* CustomCronogramaViewController.swift */,
-				D7C3BCF821C9F93000AE5F7C /* CustomLivrosViewController.swift */,
+				D7C3BCFA21C9FFBB00AE5F7C /* DespetadorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +462,8 @@
 				D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */,
 				D7C3BCF921C9F93000AE5F7C /* CustomLivrosViewController.swift in Sources */,
 				C493E36521C97B6D00FF784D /* Send.swift in Sources */,
+				D7C3BCFB21C9FFBB00AE5F7C /* DespetadorViewController.swift in Sources */,
+				D7C3BD0321CABF9400AE5F7C /* AlertaViewController.swift in Sources */,
 				D7C3BCEF21C8E8A000AE5F7C /* viewControlerAddLivros.swift in Sources */,
 				C41C855721C41CF80018380D /* Livro.swift in Sources */,
 			);

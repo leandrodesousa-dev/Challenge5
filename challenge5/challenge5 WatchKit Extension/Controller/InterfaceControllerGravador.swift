@@ -11,33 +11,43 @@ import Foundation
 
 
 class InterfaceControllerGravador: WKInterfaceController {
-
     
-    @IBOutlet weak var labelLivro: WKInterfaceLabel!
+    var index = 0;
+    var titulo = ""
+    var atual = 0
+    var paginas = 0
+    var audio = ""
     
+    @IBOutlet weak var prosseguiButton: WKInterfaceButton!
     //Botoes
     @IBAction func btGravador() {
-        let oi = WKAudioRecorderPreset.narrowBandSpeech
-        let pao = newOutputURL()
-        let options: [String : Any] =
-            [WKAudioRecorderControllerOptionsAutorecordKey: 30]
-        presentAudioRecorderController(withOutputURL: pao, preset: oi, options: options){
-            [weak self] (didSave: Bool, error: Error?) in
+        print(audio)
+        presentMediaPlayerController(with: URL(fileURLWithPath: audio), options: nil){_,_,_ in
             
-            // 5
-            guard didSave else { return }
-            //self?.processRecordedAudio(at: pao)
         }
-
+        
     }
     
     
+    @IBAction func Proseguir() {
+        WKInterfaceController.reloadRootControllers(withNames: ["InterfaceControllerRelogio"], contexts: [["0":index,"1":titulo,"2":atual,"3":paginas]])
+    }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        if let detailData = context as? String{
-            labelLivro.setText(detailData)
+        if let detailData = context as? [String:Any?] {
+            index = detailData["0"] as! Int
+            titulo = detailData["1"] as! String
+            atual = detailData["2"] as! Int
+            paginas = detailData["3"] as! Int
+            if let coiso = detailData["5"] as? String{
+                audio = coiso
+            }
+            else{
+                WKInterfaceController.reloadRootControllers(withNames: ["InterfaceControllerRelogio"], contexts: [["0":index,"1":titulo,"2":atual,"3":paginas]])
+            }
+            self.setTitle(titulo)
         }
         // Configure interface objects here.
     }
@@ -52,14 +62,6 @@ class InterfaceControllerGravador: WKInterfaceController {
         super.didDeactivate()
     }
     
-    //Funcoes
-    func newOutputURL() -> URL {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddHHmmssZZZ"
-        let date = Date()
-        let filename = dateFormatter.string(from: date)
-        let output = FileManager.default.userDocumentsDirectory.appendingPathComponent("\(filename).m4a")
-        return output
-    }
+    
 
 }

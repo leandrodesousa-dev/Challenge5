@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import WatchConnectivity
 import Foundation
 
 
@@ -21,6 +22,8 @@ class InterfaceControllerRelogio: WKInterfaceController {
     
     //Context
     var index = 0
+    var atual = 0
+    var paginas = 0
     
     //Outlet da label e botões
     
@@ -40,12 +43,19 @@ class InterfaceControllerRelogio: WKInterfaceController {
     }
     
     @IBAction func FinalizarBt() {
+        atual += 1
+        //WCSession.default.sendMessage(["0":index,"2":atual], replyHandler: nil, errorHandler: nil)
+        pushController(withName: "InterfaceControllerPaginas", context: ["0":index, "2":atual, "3":paginas, "6":tempo])
         
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        index = context as! Int
+        var contexto = context as! [String:Any?]
+        index = contexto["0"] as! Int
+        self.setTitle(contexto["1"] as? String)
+        atual = contexto["2"] as! Int
+        paginas = contexto["3"] as! Int
         // Configure interface objects here.
     }
 

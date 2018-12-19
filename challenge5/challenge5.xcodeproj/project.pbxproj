@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		C41C855521C41BDF0018380D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855421C41BDF0018380D /* CoreData.swift */; };
 		C41C855721C41CF80018380D /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855621C41CF80018380D /* Livro.swift */; };
-		C4207CA121C9728000DB891E /* Livros.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4207C9F21C9728000DB891E /* Livros.xcdatamodeld */; };
 		C430AE9F21C93D080066BD2E /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AE9E21C93D080066BD2E /* Lista.swift */; };
 		C430AEA121C9419D0066BD2E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA021C9419D0066BD2E /* Notification.swift */; };
 		C430AEA621C96A710066BD2E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA521C96A710066BD2E /* Notifications.swift */; };
+		C4833EE321CA9AEC000A3687 /* InterfaceControllerReprodutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4833EE221CA9AEC000A3687 /* InterfaceControllerReprodutor.swift */; };
+		C4833EE621CAC319000A3687 /* Livros.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4833EE421CAC319000A3687 /* Livros.xcdatamodeld */; };
 		C493E36521C97B6D00FF784D /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493E36421C97B6D00FF784D /* Send.swift */; };
 		D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73419A821C81FFA00091795 /* CollectionViewCellController.swift */; };
 		D7C3BCEF21C8E8A000AE5F7C /* viewControlerAddLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */; };
@@ -32,7 +33,7 @@
 		D7DF9E2C21C1AAF20018B3EA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E2A21C1AAF20018B3EA /* Interface.storyboard */; };
 		D7DF9E2E21C1AAF30018B3EA /* Assests.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E2D21C1AAF30018B3EA /* Assests.xcassets */; };
 		D7DF9E3521C1AAF30018B3EA /* challenge5 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7DF9E3421C1AAF30018B3EA /* challenge5 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D7DF9E3A21C1AAF30018B3EA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */; };
+		D7DF9E3A21C1AAF30018B3EA /* InterfaceControllerPaginas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3921C1AAF30018B3EA /* InterfaceControllerPaginas.swift */; };
 		D7DF9E3C21C1AAF30018B3EA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */; };
 		D7DF9E3E21C1AAF30018B3EA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */; };
 		D7DF9E4021C1AAF40018B3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E3F21C1AAF40018B3EA /* Assets.xcassets */; };
@@ -88,10 +89,11 @@
 /* Begin PBXFileReference section */
 		C41C855421C41BDF0018380D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		C41C855621C41CF80018380D /* Livro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
-		C4207CA021C9728000DB891E /* Livros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livros.xcdatamodel; sourceTree = "<group>"; };
 		C430AE9E21C93D080066BD2E /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		C430AEA021C9419D0066BD2E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		C430AEA521C96A710066BD2E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		C4833EE221CA9AEC000A3687 /* InterfaceControllerReprodutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerReprodutor.swift; sourceTree = "<group>"; };
+		C4833EE521CAC319000A3687 /* Livros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livros.xcdatamodel; sourceTree = "<group>"; };
 		C493E36421C97B6D00FF784D /* Send.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Send.swift; sourceTree = "<group>"; };
 		D73419A821C81FFA00091795 /* CollectionViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellController.swift; sourceTree = "<group>"; };
 		D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControlerAddLivros.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		D7DF9E2D21C1AAF30018B3EA /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assests.xcassets; sourceTree = "<group>"; };
 		D7DF9E2F21C1AAF30018B3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7DF9E3421C1AAF30018B3EA /* challenge5 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "challenge5 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D7DF9E3921C1AAF30018B3EA /* InterfaceControllerPaginas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerPaginas.swift; sourceTree = "<group>"; };
 		D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D7DF9E3F21C1AAF40018B3EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -270,8 +272,8 @@
 				C41C855621C41CF80018380D /* Livro.swift */,
 				D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */,
 				C430AEA521C96A710066BD2E /* Notifications.swift */,
-				C4207C9F21C9728000DB891E /* Livros.xcdatamodeld */,
 				C493E36421C97B6D00FF784D /* Send.swift */,
+				C4833EE421CAC319000A3687 /* Livros.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,7 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DF9E3B21C1AAF30018B3EA /* ExtensionDelegate.swift */,
-				D7DF9E3921C1AAF30018B3EA /* InterfaceController.swift */,
+				C4833EE221CA9AEC000A3687 /* InterfaceControllerReprodutor.swift */,
+				D7DF9E3921C1AAF30018B3EA /* InterfaceControllerPaginas.swift */,
 				D7DF9E5921C2D5700018B3EA /* InterfaceControllerRelogio.swift */,
 				D7DF9E5B21C2EB090018B3EA /* InterfaceControllerGravador.swift */,
 				D7DF9E5F21C41FF40018B3EA /* InterfaceControllerLivros.swift */,
@@ -452,9 +455,9 @@
 			files = (
 				C430AEA621C96A710066BD2E /* Notifications.swift in Sources */,
 				D7C3BCF321C98BFF00AE5F7C /* LivrosTableViewCell.swift in Sources */,
+				C4833EE621CAC319000A3687 /* Livros.xcdatamodeld in Sources */,
 				C41C855521C41BDF0018380D /* CoreData.swift in Sources */,
 				D7C3BCF721C9F89F00AE5F7C /* CustomCronogramaViewController.swift in Sources */,
-				C4207CA121C9728000DB891E /* Livros.xcdatamodeld in Sources */,
 				D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */,
 				D7C3BCF521C990B700AE5F7C /* CronogramaViewController.swift in Sources */,
 				D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */,
@@ -475,13 +478,14 @@
 			files = (
 				D7DF9E3E21C1AAF30018B3EA /* NotificationController.swift in Sources */,
 				D7DF9E6021C41FF40018B3EA /* InterfaceControllerLivros.swift in Sources */,
+				C4833EE321CA9AEC000A3687 /* InterfaceControllerReprodutor.swift in Sources */,
 				D7DF9E6421C420C70018B3EA /* RowController.swift in Sources */,
 				D7DF9E5E21C2EC690018B3EA /* Extensions.swift in Sources */,
 				D7DF9E3C21C1AAF30018B3EA /* ExtensionDelegate.swift in Sources */,
 				D7DF9E5A21C2D5700018B3EA /* InterfaceControllerRelogio.swift in Sources */,
 				C430AEA121C9419D0066BD2E /* Notification.swift in Sources */,
 				D7DF9E5C21C2EB090018B3EA /* InterfaceControllerGravador.swift in Sources */,
-				D7DF9E3A21C1AAF30018B3EA /* InterfaceController.swift in Sources */,
+				D7DF9E3A21C1AAF30018B3EA /* InterfaceControllerPaginas.swift in Sources */,
 				C430AE9F21C93D080066BD2E /* Lista.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +667,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -685,7 +689,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -704,7 +708,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -723,7 +727,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -805,12 +809,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C4207C9F21C9728000DB891E /* Livros.xcdatamodeld */ = {
+		C4833EE421CAC319000A3687 /* Livros.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C4207CA021C9728000DB891E /* Livros.xcdatamodel */,
+				C4833EE521CAC319000A3687 /* Livros.xcdatamodel */,
 			);
-			currentVersion = C4207CA021C9728000DB891E /* Livros.xcdatamodel */;
+			currentVersion = C4833EE521CAC319000A3687 /* Livros.xcdatamodel */;
 			path = Livros.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

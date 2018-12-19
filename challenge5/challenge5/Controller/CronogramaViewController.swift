@@ -19,7 +19,8 @@ class CronogramaViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath) as! LivrosTableViewCell
         
         cell.tituloText.text = livros[indexPath.item].value(forKey: "title") as? String
-        
+        cell.imagemLivro.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
+
         return cell
     }
     

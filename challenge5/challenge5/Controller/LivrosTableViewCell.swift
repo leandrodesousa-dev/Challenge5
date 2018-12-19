@@ -12,6 +12,9 @@ class LivrosTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tituloText: UILabel!
     
+    @IBOutlet weak var imagemLivro: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -196,24 +196,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Celula" id="M4w-9i-hdr" customClass="LivrosTableViewCell" customModule="challenge5" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Celula" rowHeight="162" id="M4w-9i-hdr" customClass="LivrosTableViewCell" customModule="challenge5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M4w-9i-hdr" id="shX-03-bV7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcF-Do-jvr">
-                                                    <rect key="frame" x="54" y="12" width="43" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcF-Do-jvr">
+                                                    <rect key="frame" x="132" y="12" width="202" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kBf-O3-KED">
+                                                    <rect key="frame" x="30" y="12" width="88" height="129"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="129" id="b79-6x-08Z"/>
+                                                        <constraint firstAttribute="width" constant="88" id="ww6-cw-uKH"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kBf-O3-KED" secondAttribute="bottom" constant="10" id="7Ph-7r-iU3"/>
+                                                <constraint firstItem="XcF-Do-jvr" firstAttribute="leading" secondItem="kBf-O3-KED" secondAttribute="trailing" constant="14" id="RSf-ks-tPK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XcF-Do-jvr" secondAttribute="trailing" constant="26" id="aMa-OC-cIr"/>
+                                                <constraint firstItem="kBf-O3-KED" firstAttribute="top" secondItem="shX-03-bV7" secondAttribute="topMargin" constant="1" id="fAT-SY-hAD"/>
+                                                <constraint firstItem="XcF-Do-jvr" firstAttribute="top" secondItem="shX-03-bV7" secondAttribute="topMargin" constant="1" id="wC3-cz-cOv"/>
+                                                <constraint firstItem="kBf-O3-KED" firstAttribute="leading" secondItem="shX-03-bV7" secondAttribute="leadingMargin" constant="15" id="xBu-g8-ibx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="imagemLivro" destination="kBf-O3-KED" id="bGY-b2-M7Z"/>
                                             <outlet property="tituloText" destination="XcF-Do-jvr" id="DBF-Ed-NOB"/>
                                         </connections>
                                     </tableViewCell>

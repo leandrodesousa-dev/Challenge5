@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="103"/>
+            <point key="canvasLocation" x="1961" y="-783"/>
         </scene>
         <!--View Controler Add Livros-->
         <scene sceneID="LOd-aN-m9H">
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UF-Zb-Tei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="902"/>
+            <point key="canvasLocation" x="2892" y="-783"/>
         </scene>
         <!--Cronograma View Controller-->
         <scene sceneID="XR2-2G-RfX">
@@ -399,7 +399,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuv-h6-KIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="-783"/>
+            <point key="canvasLocation" x="902" y="-783"/>
         </scene>
         <!-- Cronograma-->
         <scene sceneID="LOO-qz-LPZ">
@@ -418,7 +418,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9o-ug-ldX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="-640"/>
+            <point key="canvasLocation" x="903" y="116"/>
         </scene>
     </scenes>
     <resources>

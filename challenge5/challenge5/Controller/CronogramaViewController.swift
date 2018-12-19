@@ -28,6 +28,7 @@ class CronogramaViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var tableView: UITableView!
     
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,8 @@ class CronogramaViewController: UIViewController, UITableViewDataSource, UITable
         // Do any additional setup after loading the view.
          NotificationCenter.default.addObserver(self, selector: #selector(CronogramaViewController.notificacaoDerecebimento(_:)), name: notificacaoDeCadastroDeLivro, object: nil)
     }
+    
+  
     
     deinit {
         NotificationCenter.default.removeObserver(self)

@@ -32,12 +32,12 @@
                                 <color key="textColor" red="0.0039215686274509803" green="0.27450980392156865" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="28O-Il-YDy">
-                                <rect key="frame" x="23" y="131" width="331" height="472"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="162" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="28O-Il-YDy">
+                                <rect key="frame" x="23" y="131" width="331" height="487"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="162" id="axF-ib-WK9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="162" id="axF-ib-WK9" customClass="TableViewCell" customModule="challenge5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="331" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axF-ib-WK9" id="ZzN-Th-RdV">
@@ -57,7 +57,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvt-P3-Zwx">
-                                                    <rect key="frame" x="123" y="6" width="56" height="31"/>
+                                                    <rect key="frame" x="123" y="6" width="193" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                     <color key="textColor" red="0.0039215686274509803" green="0.27450980392156865" blue="0.4392156862745098" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -108,8 +108,20 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="allPages" destination="izK-jd-ud4" id="3Yq-m6-ZOJ"/>
+                                            <outlet property="allTime" destination="mMk-8l-J97" id="oO5-7T-617"/>
+                                            <outlet property="currntPage" destination="Q19-oy-5GZ" id="NwA-cI-GG1"/>
+                                            <outlet property="imageBook" destination="BPe-v5-xy7" id="cBk-cZ-bVl"/>
+                                            <outlet property="titleBook" destination="gvt-P3-Zwx" id="aYX-FU-boz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MX6-iz-i2e"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZH6-FA-Ib7"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,12 +131,13 @@
                         <barButtonItem key="rightBarButtonItem" image="mais" id="JnC-Ft-YxB">
                             <color key="tintColor" red="0.0026702226605266333" green="0.2750333845615387" blue="0.44118806719779968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="jZM-TQ-kam" kind="popoverPresentation" popoverAnchorBarButtonItem="JnC-Ft-YxB" id="DSf-JG-nzK">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="jZM-TQ-kam" kind="show" id="DSf-JG-nzK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="28O-Il-YDy" id="OM8-Go-quS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,6 +202,9 @@
                                 <rect key="frame" x="123" y="595" width="128" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Salvar" backgroundImage="botao"/>
+                                <connections>
+                                    <action selector="salvarLivros:" destination="jZM-TQ-kam" eventType="touchUpInside" id="1M8-lU-3yN"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" backIndicatorImage="&lt;" translatesAutoresizingMaskIntoConstraints="NO" id="Npt-li-e1f">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

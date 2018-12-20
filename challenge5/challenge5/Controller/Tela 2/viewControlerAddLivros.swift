@@ -9,7 +9,7 @@
 import WatchKit
 import UIKit
 
-class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var galeriaOut: UIButton!
     
@@ -17,18 +17,30 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var Paginas: UITextField!
   
     var imagePicker = UIImagePickerController()
+    var activeTextField: UITextField!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("chamou")
+        activeTextField = textField
     }
     
-    var activeTextField: UITextField!
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        tituloLabel.resignFirstResponder()
+        
+        Paginas.resignFirstResponder()
+        
+        return(true)
+    }
     
     @objc func keyboardDidShow(notification: Notification) {
         let info: NSDictionary = notification.userInfo! as NSDictionary
         let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let keyboardY = self.view.frame.size.height - keyboardSize.height
+        print(activeTextField)
         let editingTextFieldY: CGFloat! = self.activeTextField?.frame.origin.y
         
         // Verificando se o textfield está realmente escondido atrás do teclado
@@ -46,10 +58,29 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
         UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)}, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tituloLabel.delegate = self
+        self.Paginas.delegate = self
+        
+        // Listen for keyboard events
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: viewControlerAddLivros.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: viewControlerAddLivros.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: viewControlerAddLivros.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: viewControlerAddLivros.keyboardWillHideNotification, object: nil)
+        
+    }
+    
     @IBAction func salvarLivros(_ sender: Any) {
         saveCoreData(image: galeriaOut!.imageView?.image, titulo: tituloLabel.text!, paginas: Int(Paginas.text!)!)
-        sendContext()
-        navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async{
+            sendContext()
+        }
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func galeriaBt(_ sender: Any) {

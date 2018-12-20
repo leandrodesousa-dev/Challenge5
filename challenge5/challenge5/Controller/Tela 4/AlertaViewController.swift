@@ -10,19 +10,15 @@ import UIKit
 
 class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
   
+    var textF = UITextField()
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
-       
-        
 //        return 1
         
-        if pickerView == livrosPicker {
-            //      return arrayAltura.count
+        switch pickerView {
+        case livrosPicker:
             return 1
-        }
-        else if pickerView == horarioPicker {
-            return 1
-        }  else {
+        default:
             return 1
         }
       
@@ -30,57 +26,59 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
        // return testeLivros.count
-        
-        switch pickerView {
-        case livrosPicker:
-            return self.testeLivros.count
-        default:
-            return self.testeHorario.count
-        }
 
+        if textF == livrosPicker{
+          return testeLivros.count
+        } else if textF == horarioPicker{
+            return testeHorario.count
+        }else {
+            return 0
+        }
         
     }
+    var dictionary = [Int: Bool]()
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-     //   return testeLivros[row]
+//        return testeLivros[row]
 
-        switch pickerView {
+        switch textF {
         case livrosPicker:
-            return self.testeLivros[row]
+            return testeLivros[row]
         default:
-            return self.testeHorario[row]
+            return testeHorario[row]
         }
-        
+    
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let pickerView1 = UIPickerView()
+        pickerView1.delegate = self
+        pickerView1.dataSource = self
+        
+        textF = textField
+        if textF == livrosPicker{
+            livrosPicker.inputView = pickerView1
+        } else if textF == horarioPicker{
+            horarioPicker.inputView = pickerView1
+        }
+    }
+    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        selecaoLivros = testeLivros[row]
 //        livrosPicker.text = selecaoLivros
-        if pickerView == livrosPicker {
-            print("Livro Selecionada: \(row)")
-           selecaoLivros = testeLivros[row]
-            livrosPicker.text = selecaoLivros
+
+        if textF == livrosPicker{
+            livrosPicker.text = testeLivros[row]
+            
+        } else if textF == horarioPicker{
+            horarioPicker.text = testeHorario[row]
+     //   self.view.endEditing(true)
         }
-        else if pickerView == horarioPicker {
-            print("horario Selecionada: \(row)")
-            selecaoHorario = testeHorario[row]
-            horarioPicker.text = selecaoHorario
-        }
-   
+          
+
     }
     
-    
-    func criarPickerView(){
-        let pickerView1 = UIPickerView()
-        pickerView1.delegate = self
-        
-        let pickerView2 = UIPickerView()
-        pickerView2.delegate = self
-        
-        
-        livrosPicker.inputView = pickerView1
-        horarioPicker.inputView = pickerView2
-    }
     
     @objc func descerPickerView(){
        let toolbar = UIToolbar()
@@ -92,7 +90,8 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
         toolbar.setItems([doneButton], animated: false)
         toolbar.isUserInteractionEnabled = true
         
-        livrosPicker.inputAccessoryView = toolbar
+        
+       livrosPicker.inputAccessoryView = toolbar
         horarioPicker.inputAccessoryView = toolbar
         
     }
@@ -118,12 +117,13 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     
     @IBOutlet weak var horarioPicker: UITextField!
     
+    @IBOutlet weak var BTlivrosTeste: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-criarPickerView()
- descerPickerView()
-     
+        descerPickerView()
+
     }
     
 

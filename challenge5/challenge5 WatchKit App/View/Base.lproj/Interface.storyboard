@@ -19,24 +19,17 @@
                                 <table alignment="center" verticalAlignment="center" id="L9I-1F-nEv">
                                     <items>
                                         <tableRow identifier="RowController" id="8hM-Tu-QSD" customClass="RowController" customModule="challenge5_WatchKit_Extension">
-                                            <group key="rootItem" width="1" height="1" alignment="left" layout="overlap" id="K5d-Oy-Huv">
+                                            <group key="rootItem" width="1" height="100" alignment="left" layout="vertical" id="K5d-Oy-Huv">
                                                 <items>
-                                                    <group width="1" height="0.69999999999999996" alignment="center" verticalAlignment="center" layout="overlap" id="KjC-Rx-CIR">
-                                                        <items>
-                                                            <imageView width="1" height="1" alignment="center" verticalAlignment="center" id="XVJ-CM-qjj"/>
-                                                            <imageView width="1" height="1" alignment="left" image="Rectangle" id="aRf-F9-rv3"/>
-                                                        </items>
-                                                    </group>
-                                                    <label height="0.14999999999999999" alignment="center" text="Label" id="NKV-Zn-K4r">
+                                                    <label height="0.5" alignment="left" text="Label" id="NKV-Zn-K4r">
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                                                     </label>
-                                                    <label height="0.14999999999999999" alignment="center" verticalAlignment="bottom" text="Label" id="cUQ-V7-eio">
+                                                    <label height="0.5" alignment="center" verticalAlignment="bottom" text="Label" id="cUQ-V7-eio">
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                                                     </label>
                                                 </items>
                                             </group>
                                             <connections>
-                                                <outlet property="imageBook" destination="XVJ-CM-qjj" id="8Fh-3G-hVc"/>
                                                 <outlet property="progressoLabel" destination="cUQ-V7-eio" id="WFa-rC-yK5"/>
                                                 <outlet property="rowLabel" destination="NKV-Zn-K4r" id="c5G-Vj-gYu"/>
                                             </connections>
@@ -172,15 +165,17 @@ parou?</string>
         <!--Progresso-->
         <scene sceneID="U6C-g3-c0y">
             <objects>
-                <controller title="Progresso" id="3V9-0K-CL3">
+                <controller identifier="Progresso" title="Progresso" id="3V9-0K-CL3" customClass="ProgressoViewController" customModule="challenge5_WatchKit_Extension">
                     <items>
-                        <imageView width="0.59999999999999998" height="0.5" alignment="left" id="Rhq-iU-h18"/>
-                        <label height="0.10000000000000001" alignment="left" text="Seu Progresso fo salvo!" id="edo-ak-Gbi">
+                        <imageView width="0.59999999999999998" height="0.5" alignment="left" image="ok" id="Rhq-iU-h18"/>
+                        <label height="0.10000000000000001" alignment="left" text="Seu Progresso foi salvo!" id="edo-ak-Gbi">
                             <fontDescription key="font" type="system" pointSize="11"/>
                         </label>
-                        <label alignment="left" text="Label" id="pxb-8J-x74"/>
-                        <spriteKitScene alignment="left" id="Oeh-Kk-6z5"/>
+                        <label height="0.10000000000000001" alignment="left" text="120/500" id="pxb-8J-x74"/>
                     </items>
+                    <connections>
+                        <outlet property="progressoLabel" destination="pxb-8J-x74" id="HVZ-lv-czB"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="1653" y="359"/>

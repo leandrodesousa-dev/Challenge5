@@ -44,7 +44,7 @@ class InterfaceControllerLivros: WKInterfaceController {
         for (index,rowModel) in listaTitulo.enumerated(){
             if let rowController = tableView.rowController(at: index) as? RowController{
                 rowController.rowLabel.setText(rowModel)
-                //rowController.imageBook.setImageData(listaImagens[index])
+                //rowController.imageBook.setImageData(listaImagens[index] ?? UIImage(named: "image")?.pngData())
                 rowController.progressoLabel.setText("\(listaAtual[index])/\(listaPaginas[index])")
             }
         }

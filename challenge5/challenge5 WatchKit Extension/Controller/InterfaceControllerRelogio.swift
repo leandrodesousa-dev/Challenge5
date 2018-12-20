@@ -7,7 +7,6 @@
 //
 
 import WatchKit
-import WatchConnectivity
 import Foundation
 
 
@@ -43,9 +42,9 @@ class InterfaceControllerRelogio: WKInterfaceController {
     }
     
     @IBAction func FinalizarBt() {
-        atual += 1
         //WCSession.default.sendMessage(["0":index,"2":atual], replyHandler: nil, errorHandler: nil)
-        pushController(withName: "InterfaceControllerPaginas", context: ["0":index, "2":atual, "3":paginas, "6":tempo])
+        let coiso = (horas*3600)+(minutos*60)
+        pushController(withName: "InterfaceControllerPaginas", context: ["0":index, "2":atual, "3":paginas, "6":coiso])
         
     }
     
@@ -75,7 +74,6 @@ class InterfaceControllerRelogio: WKInterfaceController {
     func StartStop(){
         if chave {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(InterfaceControllerRelogio.action), userInfo: nil , repeats: true)
-            print("Inicio")
             btIniciarOut.setTitle("Stop")
             chave = false
              self.btIniciarOut.setBackgroundColor(UIColor.init(red: 32, green: 133, blue: 169))
@@ -83,7 +81,6 @@ class InterfaceControllerRelogio: WKInterfaceController {
             timer.invalidate()
             chave = true
             btIniciarOut.setTitle("Start")
-            print("pause")
              self.btIniciarOut.setBackgroundColor(UIColor.init(red: 31, green: 33, blue: 36))
         }
     }

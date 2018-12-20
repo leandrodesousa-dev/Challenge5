@@ -36,6 +36,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
         listaAudio = userInfo["5"] as? [String] ?? listaVazia
         NotificationCenter.default.post(name: notificacaoDeRecebimentoDeLivro, object: nil)
     }
+    
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        listaImagens.append(messageData)
+        NotificationCenter.default.post(name: notificacaoDeRecebimentoDeLivro, object: nil)
+    }
 
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.

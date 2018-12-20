@@ -29,6 +29,7 @@ class InterfaceControllerPaginas: WKInterfaceController {
     
     @IBAction func Prosseguir() {
         //pushController(withName: "InterfaceControllerReprodutor", context: ["0":index, "2":atual,"6":tempo])
+        WKInterfaceController.reloadRootControllers(withNames: ["Progresso"], contexts: [["2":atual,"3":paginas]])
         WCSession.default.sendMessage(["0":index, "2":atual, "6":tempo], replyHandler: nil, errorHandler: nil)
     }
     
@@ -40,6 +41,7 @@ class InterfaceControllerPaginas: WKInterfaceController {
         
         index = contexto["0"] as! Int
         atual = contexto["2"] as! Int
+        paginas = contexto["3"] as! Int
         tempo = contexto["6"] as! Int
         
         if let quantidade = contexto["3"] as? Int{

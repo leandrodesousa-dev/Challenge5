@@ -11,6 +11,7 @@
 		C41C855721C41CF80018380D /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C855621C41CF80018380D /* Livro.swift */; };
 		C429D87621CB2B0F001FF295 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429D87521CB2B0F001FF295 /* TableViewCell.swift */; };
 		C429D87821CBD3D5001FF295 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429D87721CBD3D5001FF295 /* Extension.swift */; };
+		C429D87A21CBE273001FF295 /* ProgressoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429D87921CBE273001FF295 /* ProgressoViewController.swift */; };
 		C430AE9F21C93D080066BD2E /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AE9E21C93D080066BD2E /* Lista.swift */; };
 		C430AEA121C9419D0066BD2E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA021C9419D0066BD2E /* Notification.swift */; };
 		C430AEA621C96A710066BD2E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA521C96A710066BD2E /* Notifications.swift */; };
@@ -94,6 +95,7 @@
 		C41C855621C41CF80018380D /* Livro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
 		C429D87521CB2B0F001FF295 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C429D87721CBD3D5001FF295 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C429D87921CBE273001FF295 /* ProgressoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressoViewController.swift; sourceTree = "<group>"; };
 		C430AE9E21C93D080066BD2E /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		C430AEA021C9419D0066BD2E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		C430AEA521C96A710066BD2E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				D7DF9E5F21C41FF40018B3EA /* InterfaceControllerLivros.swift */,
 				D7DF9E6321C420C70018B3EA /* RowController.swift */,
 				D7DF9E3D21C1AAF30018B3EA /* NotificationController.swift */,
+				C429D87921CBE273001FF295 /* ProgressoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				D7DF9E3E21C1AAF30018B3EA /* NotificationController.swift in Sources */,
 				D7DF9E6021C41FF40018B3EA /* InterfaceControllerLivros.swift in Sources */,
 				C4833EE321CA9AEC000A3687 /* InterfaceControllerReprodutor.swift in Sources */,
+				C429D87A21CBE273001FF295 /* ProgressoViewController.swift in Sources */,
 				D7DF9E6421C420C70018B3EA /* RowController.swift in Sources */,
 				D7DF9E5E21C2EC690018B3EA /* Extensions.swift in Sources */,
 				D7DF9E3C21C1AAF30018B3EA /* ExtensionDelegate.swift in Sources */,

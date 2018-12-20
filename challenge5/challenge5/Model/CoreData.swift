@@ -48,30 +48,31 @@ func saveCoreData(image: UIImage?, titulo: String, paginas: Int){
 }
 
 func editCoreData(dicionario: [String:Any]){
-    let index = dicionario["0"] as! Int
-    
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let context = appDelegate.persistentContainer.viewContext
-    let requestDel = NSFetchRequest<NSFetchRequestResult>(entityName: "Livros")
-    requestDel.returnsObjectsAsFaults = false
-    
-    
-    do {
-        let arrUsrObj = try context.fetch(requestDel)
-        let usrObj = arrUsrObj as! [NSManagedObject]
-        usrObj[index].setValue(dicionario["2"] as! Int, forKey: "atualPagina")
-        usrObj[index].setValue(dicionario["6"] as! Int, forKey: "time")
-        livros[index] = usrObj[index]
-        NotificationCenter.default.post(name: notificacaoDeCadastroDeLivro, object: nil, userInfo: nil)
+    if let index = dicionario["0"] as? Int{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let requestDel = NSFetchRequest<NSFetchRequestResult>(entityName: "Livros")
+        requestDel.returnsObjectsAsFaults = false
         
-    } catch {
-        print("Failed")
+        
+        do {
+            let arrUsrObj = try context.fetch(requestDel)
+            let usrObj = arrUsrObj as! [NSManagedObject]
+            usrObj[index].setValue(dicionario["2"] as! Int, forKey: "atualPagina")
+            usrObj[index].setValue(dicionario["6"] as! Int, forKey: "time")
+            livros[index] = usrObj[index]
+            NotificationCenter.default.post(name: notificacaoDeCadastroDeLivro, object: nil, userInfo: nil)
+            
+        } catch {
+            print("Failed")
+        }
+        
+        // Saving the Delete operation
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
     }
     
-    // Saving the Delete operation
-    do {
-        try context.save()
-    } catch {
-        print("Failed saving")
-    }
 }

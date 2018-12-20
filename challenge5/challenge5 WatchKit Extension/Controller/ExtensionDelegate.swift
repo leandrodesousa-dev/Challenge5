@@ -38,7 +38,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
-        listaImagens.append(messageData)
+        //listaImagens.append(messageData)
         NotificationCenter.default.post(name: notificacaoDeRecebimentoDeLivro, object: nil)
     }
 

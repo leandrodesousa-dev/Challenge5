@@ -19,7 +19,7 @@
                                 <table alignment="center" verticalAlignment="center" id="L9I-1F-nEv">
                                     <items>
                                         <tableRow identifier="RowController" id="8hM-Tu-QSD" customClass="RowController" customModule="challenge5_WatchKit_Extension">
-                                            <group key="rootItem" width="1" height="100" alignment="left" layout="vertical" id="K5d-Oy-Huv">
+                                            <group key="rootItem" width="1" alignment="left" layout="vertical" id="K5d-Oy-Huv">
                                                 <items>
                                                     <label height="0.5" alignment="left" text="Label" id="NKV-Zn-K4r">
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption1"/>

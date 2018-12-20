@@ -12,6 +12,8 @@
 		C429D87621CB2B0F001FF295 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429D87521CB2B0F001FF295 /* TableViewCell.swift */; };
 		C429D87821CBD3D5001FF295 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429D87721CBD3D5001FF295 /* Extension.swift */; };
 		C429D87A21CBE273001FF295 /* ProgressoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429D87921CBE273001FF295 /* ProgressoViewController.swift */; };
+		C429D88021CC0BF0001FF295 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C429D87F21CC0BF0001FF295 /* SF-Pro-Display-Regular.otf */; };
+		C429D88221CC1150001FF295 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C429D88121CC1150001FF295 /* Montserrat-Regular.ttf */; };
 		C430AE9F21C93D080066BD2E /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AE9E21C93D080066BD2E /* Lista.swift */; };
 		C430AEA121C9419D0066BD2E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA021C9419D0066BD2E /* Notification.swift */; };
 		C430AEA621C96A710066BD2E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA521C96A710066BD2E /* Notifications.swift */; };
@@ -96,6 +98,8 @@
 		C429D87521CB2B0F001FF295 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C429D87721CBD3D5001FF295 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C429D87921CBE273001FF295 /* ProgressoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressoViewController.swift; sourceTree = "<group>"; };
+		C429D87F21CC0BF0001FF295 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../../../Volumes/SF-Font/SF Pro/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		C429D88121CC1150001FF295 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../Library/Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		C430AE9E21C93D080066BD2E /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		C430AEA021C9419D0066BD2E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		C430AEA521C96A710066BD2E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DF9E1D21C1AAF20018B3EA /* Assets.xcassets */,
+				C429D87F21CC0BF0001FF295 /* SF-Pro-Display-Regular.otf */,
+				C429D88121CC1150001FF295 /* Montserrat-Regular.ttf */,
 				D7DF9E1F21C1AAF20018B3EA /* LaunchScreen.storyboard */,
 				D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */,
 			);
@@ -445,6 +451,8 @@
 			files = (
 				D7DF9E2121C1AAF20018B3EA /* LaunchScreen.storyboard in Resources */,
 				D7DF9E1E21C1AAF20018B3EA /* Assets.xcassets in Resources */,
+				C429D88021CC0BF0001FF295 /* SF-Pro-Display-Regular.otf in Resources */,
+				C429D88221CC1150001FF295 /* Montserrat-Regular.ttf in Resources */,
 				D7DF9E1C21C1AAF10018B3EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

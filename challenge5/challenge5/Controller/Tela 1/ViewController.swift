@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
       
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.isHidden = false
   
         //navigationController?.isNavigationBarHidden = true
         initCoreData()

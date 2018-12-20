@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import WatchConnectivity
 import Foundation
 
 
@@ -27,7 +28,8 @@ class InterfaceControllerPaginas: WKInterfaceController {
     }
     
     @IBAction func Prosseguir() {
-        pushController(withName: "InterfaceControllerReprodutor", context: ["0":index, "2":atual,"6":tempo])
+        //pushController(withName: "InterfaceControllerReprodutor", context: ["0":index, "2":atual,"6":tempo])
+        WCSession.default.sendMessage(["0":index, "2":atual, "6":tempo], replyHandler: nil, errorHandler: nil)
     }
     
     override func awake(withContext context: Any?) {

@@ -9,9 +9,10 @@
 import UIKit
 import WatchConnectivity
 
-class ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
-
+class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     var proLeitura = 0.0
       
@@ -28,15 +29,30 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         NotificationCenter.default.removeObserver(self)
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
+//
+//        cell.nomedoLivro.text = livros[indexPath.item].value(forKey: "title") as? String
+//        cell.livro1.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
+//
+//        return cell
+//    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return livros.count
     }
-  
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCellController
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
-        cell.nomedoLivro.text = livros[indexPath.item].value(forKey: "title") as? String
-        cell.livro1.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
+        cell.titleBook.text = livros[indexPath.item].value(forKey: "title") as? String
+        cell.imageBook.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
+        cell.currntPage.text = "\(livros[indexPath.item].value(forKey: "atualPagina") as? Int)"
+        cell.allPages.text = "\(livros[indexPath.item].value(forKey: "pagina") as? Int)"
         
         return cell
     }
@@ -44,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
     @objc private func notificacaoDerecebimento(_ notification: Notification){
         
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            self.tableView.reloadData()
         }
         
     }

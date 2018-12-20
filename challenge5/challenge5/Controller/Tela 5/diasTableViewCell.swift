@@ -10,6 +10,9 @@ import UIKit
 
 class diasTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var diasText: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

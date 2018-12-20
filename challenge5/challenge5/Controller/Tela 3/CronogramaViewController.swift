@@ -33,6 +33,8 @@ class CronogramaViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
+         self.tabBarController?.tabBar.isHidden = false
+        
         // Do any additional setup after loading the view.
          NotificationCenter.default.addObserver(self, selector: #selector(CronogramaViewController.notificacaoDerecebimento(_:)), name: notificacaoDeCadastroDeLivro, object: nil)
     }

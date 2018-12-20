@@ -30,6 +30,7 @@
 		D7C3BD0321CABF9400AE5F7C /* AlertaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BD0221CABF9400AE5F7C /* AlertaViewController.swift */; };
 		D7C3BD0921CB978800AE5F7C /* DiasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BD0821CB978800AE5F7C /* DiasViewController.swift */; };
 		D7C3BD0B21CB983F00AE5F7C /* diasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BD0A21CB983F00AE5F7C /* diasTableViewCell.swift */; };
+		D7C3BD0D21CC170200AE5F7C /* DiasdaSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BD0C21CC170200AE5F7C /* DiasdaSemana.swift */; };
 		D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */; };
 		D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DF9E1821C1AAF10018B3EA /* ViewController.swift */; };
 		D7DF9E1C21C1AAF10018B3EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */; };
@@ -116,6 +117,7 @@
 		D7C3BD0221CABF9400AE5F7C /* AlertaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaViewController.swift; sourceTree = "<group>"; };
 		D7C3BD0821CB978800AE5F7C /* DiasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasViewController.swift; sourceTree = "<group>"; };
 		D7C3BD0A21CB983F00AE5F7C /* diasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diasTableViewCell.swift; sourceTree = "<group>"; };
+		D7C3BD0C21CC170200AE5F7C /* DiasdaSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasdaSemana.swift; sourceTree = "<group>"; };
 		D7DF9E1321C1AAF10018B3EA /* challenge5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challenge5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DF9E1621C1AAF10018B3EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DF9E1821C1AAF10018B3EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				C493E36421C97B6D00FF784D /* Send.swift */,
 				C4833EE421CAC319000A3687 /* Livros.xcdatamodeld */,
 				C429D87721CBD3D5001FF295 /* Extension.swift */,
+				D7C3BD0C21CC170200AE5F7C /* DiasdaSemana.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				D7DF9E1921C1AAF10018B3EA /* ViewController.swift in Sources */,
 				D7C3BD0B21CB983F00AE5F7C /* diasTableViewCell.swift in Sources */,
 				D7C3BCF521C990B700AE5F7C /* CronogramaViewController.swift in Sources */,
+				D7C3BD0D21CC170200AE5F7C /* DiasdaSemana.swift in Sources */,
 				D7DF9E1721C1AAF10018B3EA /* AppDelegate.swift in Sources */,
 				D7C3BCF121C9665E00AE5F7C /* listadeLiv.swift in Sources */,
 				D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */,

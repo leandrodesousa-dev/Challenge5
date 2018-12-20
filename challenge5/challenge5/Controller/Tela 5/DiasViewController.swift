@@ -10,20 +10,18 @@ import UIKit
 
 class DiasViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    var dias = ["segunda","terça","quarta"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dias.count
+        return DiasdaSemana.all
+        .count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! diasTableViewCell
-        
-        //aqui
-        for i in 0...2 {
-            //cell.diasText.text = dias[i]
-        }
-        
+       
+        let dias = DiasdaSemana.all[indexPath.row]
+     
+        cell.diasText.text = dias.Dsemana
         
      return cell
     }

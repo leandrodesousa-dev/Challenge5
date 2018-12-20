@@ -61,6 +61,8 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.isHidden = true
+        
         self.tituloLabel.delegate = self
         self.Paginas.delegate = self
         

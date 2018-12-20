@@ -21,7 +21,7 @@ class DiasViewController: UIViewController,UITableViewDataSource, UITableViewDel
         
         //aqui
         for i in 0...2 {
-            cell.diasText.text = dias[i]
+            //cell.diasText.text = dias[i]
         }
         
         

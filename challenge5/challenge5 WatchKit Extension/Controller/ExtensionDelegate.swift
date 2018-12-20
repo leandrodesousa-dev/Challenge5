@@ -12,6 +12,7 @@ import WatchConnectivity
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //
+        WCSession.default.sendMessage([:], replyHandler: nil, errorHandler: nil)
     }
 
     func applicationDidFinishLaunching() {

@@ -60,6 +60,7 @@ func editCoreData(dicionario: [String:Any]){
         let arrUsrObj = try context.fetch(requestDel)
         let usrObj = arrUsrObj as! [NSManagedObject]
         usrObj[index].setValue(dicionario["2"] as! Int, forKey: "atualPagina")
+        usrObj[index].setValue(dicionario["6"] as! Int, forKey: "time")
         livros[index] = usrObj[index]
         NotificationCenter.default.post(name: notificacaoDeCadastroDeLivro, object: nil, userInfo: nil)
         

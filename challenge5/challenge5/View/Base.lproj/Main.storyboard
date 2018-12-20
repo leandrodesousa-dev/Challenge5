@@ -70,7 +70,7 @@
                                                     <color key="textColor" red="0.0039215686269999999" green="0.27450980390000002" blue="0.43921568630000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="230" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q19-oy-5GZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="230" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q19-oy-5GZ">
                                                     <rect key="frame" x="121" y="103" width="37" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
@@ -113,6 +113,7 @@
                                             <outlet property="allTime" destination="mMk-8l-J97" id="oO5-7T-617"/>
                                             <outlet property="currntPage" destination="Q19-oy-5GZ" id="NwA-cI-GG1"/>
                                             <outlet property="imageBook" destination="BPe-v5-xy7" id="cBk-cZ-bVl"/>
+                                            <outlet property="progress" destination="iDK-ML-69N" id="Usz-RE-vJY"/>
                                             <outlet property="titleBook" destination="gvt-P3-Zwx" id="aYX-FU-boz"/>
                                         </connections>
                                     </tableViewCell>

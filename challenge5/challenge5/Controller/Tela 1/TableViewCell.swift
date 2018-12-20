@@ -15,6 +15,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var allTime: UILabel!
     @IBOutlet weak var currntPage: UILabel!
     @IBOutlet weak var allPages: UILabel!
+    @IBOutlet weak var progress: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

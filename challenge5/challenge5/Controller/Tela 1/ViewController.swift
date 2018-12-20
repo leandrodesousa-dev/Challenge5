@@ -11,7 +11,6 @@ import WatchConnectivity
 
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
     var proLeitura = 0.0
@@ -53,8 +52,12 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         
         cell.titleBook.text = livros[indexPath.item].value(forKey: "title") as? String
         cell.imageBook.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
-        cell.currntPage.text = "\(livros[indexPath.item].value(forKey: "atualPagina") as? Int)"
-        cell.allPages.text = "\(livros[indexPath.item].value(forKey: "pagina") as? Int)"
+        cell.allTime.text = "\(livros[indexPath.item].value(forKey: "time") as? Int ?? 0)".time()
+        let current = livros[indexPath.item].value(forKey: "atualPagina") as? Int ?? 0
+        let paginas = livros[indexPath.item].value(forKey: "pagina") as? Int ?? 0
+        cell.currntPage.text = "\(current)"
+        cell.allPages.text = "\(paginas)"
+        cell.progress.progress = Float(current/paginas)
         
         return cell
     }

@@ -48,7 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         //
-        editCoreData(dicionario: message)
+        let vazio : [String:Any] = [:]
+        if(NSDictionary(dictionary: vazio).isEqual(to: vazio)){
+            sendContext()
+        }
+        else{
+            editCoreData(dicionario: message)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -43,7 +43,9 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
 
         switch textF {
         case livrosPicker:
-            return testeLivros[row]
+           
+            return  livros[row].value(forKey: "title") as? String
+            
         default:
             return testeHorario[row]
         }
@@ -68,14 +70,23 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
 //        selecaoLivros = testeLivros[row]
 //        livrosPicker.text = selecaoLivros
 
+//        if textF == livrosPicker{
+//            livrosPicker.text = testeLivros[row]
+//
+//        } else if textF == horarioPicker{
+//            horarioPicker.text = testeHorario[row]
+//     //   self.view.endEditing(true)
+//        }
+        
+     //UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
+        
         if textF == livrosPicker{
-            livrosPicker.text = testeLivros[row]
-            
+            livrosPicker.text = livros[row].value(forKey: "title") as? String
+            imgLivro.image = UIImage(data: (livros[row].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
         } else if textF == horarioPicker{
             horarioPicker.text = testeHorario[row]
-     //   self.view.endEditing(true)
+            //   self.view.endEditing(true)
         }
-          
 
     }
     
@@ -105,25 +116,28 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     
     var testeLivros = ["livro1","livro2","livro3"]
     
-    var testeDias = ["dia1","dia2","dia3"]
     
     var testeHorario = ["hora1","hora2","hora3"]
+    
+    var horas: [Int] = []
+    var minutos: [Int] = []
+    
 
     @IBOutlet weak var imgLivro: UIImageView!
   
     @IBOutlet weak var livrosPicker: UITextField!
     
-    @IBOutlet weak var diasPicker: UITextField!
     
     @IBOutlet weak var horarioPicker: UITextField!
     
-    @IBOutlet weak var BTlivrosTeste: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         descerPickerView()
 
+       
+       
     }
     
 

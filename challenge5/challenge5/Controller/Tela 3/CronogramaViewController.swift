@@ -15,7 +15,7 @@ class CronogramaViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //identificando a primeira linha com esse nome Formato Top
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath) as! LivrosTableViewCell
         
         cell.tituloText.text = livros[indexPath.item].value(forKey: "title") as? String

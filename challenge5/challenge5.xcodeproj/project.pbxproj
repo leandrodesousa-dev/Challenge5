@@ -17,9 +17,9 @@
 		C430AEA621C96A710066BD2E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430AEA521C96A710066BD2E /* Notifications.swift */; };
 		C4833EE321CA9AEC000A3687 /* InterfaceControllerReprodutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4833EE221CA9AEC000A3687 /* InterfaceControllerReprodutor.swift */; };
 		C4833EE621CAC319000A3687 /* Livros.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4833EE421CAC319000A3687 /* Livros.xcdatamodeld */; };
+		C489592121CCEDF900489013 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C489592021CCEDF900489013 /* Montserrat-Regular.ttf */; };
 		C493E36521C97B6D00FF784D /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493E36421C97B6D00FF784D /* Send.swift */; };
 		D73419A921C81FFA00091795 /* CollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73419A821C81FFA00091795 /* CollectionViewCellController.swift */; };
-		D7908BDC21CCED1900E53635 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7908BDB21CCED1900E53635 /* Montserrat-Regular.ttf */; };
 		D7908BDE21CCED2600E53635 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7908BDD21CCED2600E53635 /* SF-Pro-Display-Regular.otf */; };
 		D7C3BCEF21C8E8A000AE5F7C /* viewControlerAddLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */; };
 		D7C3BCF121C9665E00AE5F7C /* listadeLiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */; };
@@ -104,9 +104,9 @@
 		C430AEA521C96A710066BD2E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C4833EE221CA9AEC000A3687 /* InterfaceControllerReprodutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerReprodutor.swift; sourceTree = "<group>"; };
 		C4833EE521CAC319000A3687 /* Livros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livros.xcdatamodel; sourceTree = "<group>"; };
+		C489592021CCEDF900489013 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../Library/Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		C493E36421C97B6D00FF784D /* Send.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Send.swift; sourceTree = "<group>"; };
 		D73419A821C81FFA00091795 /* CollectionViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellController.swift; sourceTree = "<group>"; };
-		D7908BDB21CCED1900E53635 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../../../Downloads/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		D7908BDD21CCED2600E53635 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		D7C3BCEE21C8E8A000AE5F7C /* viewControlerAddLivros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControlerAddLivros.swift; sourceTree = "<group>"; };
 		D7C3BCF021C9665E00AE5F7C /* listadeLiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listadeLiv.swift; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DF9E1D21C1AAF20018B3EA /* Assets.xcassets */,
-				D7908BDB21CCED1900E53635 /* Montserrat-Regular.ttf */,
+				C489592021CCEDF900489013 /* Montserrat-Regular.ttf */,
 				D7908BDD21CCED2600E53635 /* SF-Pro-Display-Regular.otf */,
 				D7DF9E1F21C1AAF20018B3EA /* LaunchScreen.storyboard */,
 				D7DF9E1A21C1AAF10018B3EA /* Main.storyboard */,
@@ -452,9 +452,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C489592121CCEDF900489013 /* Montserrat-Regular.ttf in Resources */,
 				D7DF9E2121C1AAF20018B3EA /* LaunchScreen.storyboard in Resources */,
 				D7DF9E1E21C1AAF20018B3EA /* Assets.xcassets in Resources */,
-				D7908BDC21CCED1900E53635 /* Montserrat-Regular.ttf in Resources */,
 				D7908BDE21CCED2600E53635 /* SF-Pro-Display-Regular.otf in Resources */,
 				D7DF9E1C21C1AAF10018B3EA /* Main.storyboard in Resources */,
 			);

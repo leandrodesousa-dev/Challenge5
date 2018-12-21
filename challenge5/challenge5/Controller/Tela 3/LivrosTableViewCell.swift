@@ -14,6 +14,10 @@ class LivrosTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imagemLivro: UIImageView!
     
+    @IBOutlet weak var horarioLabel: UILabel!
+    
+    @IBOutlet weak var diasLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

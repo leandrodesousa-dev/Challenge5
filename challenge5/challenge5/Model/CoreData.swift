@@ -74,5 +74,31 @@ func editCoreData(dicionario: [String:Any]){
             print("Failed saving")
         }
     }
+}
+
+func editHorario(index: Int, horario: String, dias: String){
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    let requestDel = NSFetchRequest<NSFetchRequestResult>(entityName: "Livros")
+    requestDel.returnsObjectsAsFaults = false
     
+    
+    do {
+        let arrUsrObj = try context.fetch(requestDel)
+        let usrObj = arrUsrObj as! [NSManagedObject]
+        usrObj[index].setValue(horario, forKey: "horario")
+        usrObj[index].setValue(dias, forKey: "diasAlarme")
+        livros[index] = usrObj[index]
+        NotificationCenter.default.post(name: notificacaoDeCadastroDeLivro, object: nil, userInfo: nil)
+        
+    } catch {
+        print("Failed")
+    }
+    
+    // Saving the Delete operation
+    do {
+        try context.save()
+    } catch {
+        print("Failed saving")
+    }
 }

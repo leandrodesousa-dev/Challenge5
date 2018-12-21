@@ -30,4 +30,13 @@ public struct DiasdaSemana {
         Dias(title: "Sexta-Feira", enable: false),
         Dias(title: "Sábado", enable: false)
     ]
+    public static var inicio: [Dias] = [
+        Dias(title: "Domingo", enable: false),
+        Dias(title: "Segunda-Feira", enable: false),
+        Dias(title: "Terça-Feira", enable: false),
+        Dias(title: "Quarta-Feira", enable: false),
+        Dias(title: "Quinta-Feira", enable: false),
+        Dias(title: "Sexta-Feira", enable: false),
+        Dias(title: "Sábado", enable: false)
+    ]
 }

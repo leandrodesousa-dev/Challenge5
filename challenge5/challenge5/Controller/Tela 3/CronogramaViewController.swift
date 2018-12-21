@@ -20,11 +20,36 @@ class CronogramaViewController: UIViewController, UITableViewDataSource, UITable
         
         cell.tituloText.text = livros[indexPath.item].value(forKey: "title") as? String
         cell.imagemLivro.image = UIImage(data: (livros[indexPath.item].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
+        cell.horarioLabel.text = livros[indexPath.item].value(forKey: "horario") as? String ?? ""
+        let dias = livros[indexPath.item].value(forKey: "diasAlarme") as? String ?? ""
+        let listaDias = dias.split(separator: "|")
+        cell.diasLabel.text = trocarTextoDias(listAtivados: listaDias)
 
         return cell
     }
     
-
+    func trocarTextoDias(listAtivados: [Substring])-> String {
+        if listAtivados.count == 1{
+            return "Todo(a) \(listAtivados[0])"
+        }
+        else if listAtivados == ["Domingo","Sábado"]{
+            return "Todo fins de semana"
+        }
+        else if listAtivados == ["Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira"]{
+            return "Todos os dias da semana"
+        }
+        else if listAtivados.count == 0{
+            return ""
+        }
+        else{
+            var title = "Toda "
+            for i in listAtivados{
+                title += "\(i), "
+            }
+            title = String(title.dropLast())
+            return title
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView!
     

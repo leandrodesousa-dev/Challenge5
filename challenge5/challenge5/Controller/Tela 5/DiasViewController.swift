@@ -25,7 +25,7 @@ class DiasViewController: UIViewController,UITableViewDataSource, UITableViewDel
         cell.diasText.text = dias.Dsemana
         cell.boolSwitch.isOn = dias.enabled
         cell.indexCell = indexPath.row
-        
+        self.tabBarController?.tabBar.isHidden = true
      return cell
     }
     

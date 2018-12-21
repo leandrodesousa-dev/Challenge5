@@ -10,6 +10,7 @@ import UIKit
 
 class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
   
+    var indexSelected : Int?
     var textF = UITextField()
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -35,10 +36,13 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
 
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        indexSelected = row
         livrosPicker.text = livros[row].value(forKey: "title") as? String
         imgLivro.image = UIImage(data: (livros[row].value(forKey: "image") as? Data) ?? #imageLiteral(resourceName: "background_cadastro").pngData()!)
-        
+        horarioPicker.text = livros[row].value(forKey: "horario") as? String ?? ""
+        let dias = livros[row].value(forKey: "diasAlarme") as? String ?? ""
+        let lista = dias.dropLast().split(separator: "|")
+        trocarTextoDias(listAtivados: lista)
     }
     
     private var datePicker: UIDatePicker?
@@ -132,21 +136,21 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(DiasdaSemana.all)
-        trocarTextoDias()
+        var listAtivados : [Substring] = []
+        for iten in DiasdaSemana.all.enumerated(){
+            if iten.element.enabled{
+                listAtivados.append(iten.element.Dsemana.split(separator: "{")[0])
+            }
+        }
+        trocarTextoDias(listAtivados: listAtivados)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
     
-    func trocarTextoDias() {
-        var listAtivados : [String] = []
-        for iten in DiasdaSemana.all.enumerated(){
-            if iten.element.enabled{
-                listAtivados.append(iten.element.Dsemana)
-            }
-        }
+    func trocarTextoDias(listAtivados: [Substring]) {
+        
         if listAtivados.count == 1{
             dias.titleLabel?.text = "Todo(a) \(listAtivados[0])"
         }
@@ -155,6 +159,9 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
         }
         else if listAtivados == ["Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira"]{
             dias.titleLabel?.text = "Todos os dias da semana"
+        }
+        else if listAtivados.count == 0{
+            
         }
         else{
             var title = "Toda "
@@ -165,6 +172,24 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
             dias.titleLabel?.text = title
         }
     }
+    
+    @IBAction func Salvar(_ sender: Any) {
+        if let ind = indexSelected{
+            var dias = ""
+            var listAtivados : [String] = []
+            for iten in DiasdaSemana.all.enumerated(){
+                if iten.element.enabled{
+                    listAtivados.append(iten.element.Dsemana)
+                }
+            }
 
+            for iten in listAtivados{
+                dias += "\(iten)|"
+            }
+            editHorario(index: ind, horario: horarioPicker.text ?? "", dias: String(dias.dropLast()))
+            DiasdaSemana.all = DiasdaSemana.inicio
+            navigationController?.popViewController(animated: true)
+        }
+    }
     
 }

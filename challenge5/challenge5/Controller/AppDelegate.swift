@@ -9,15 +9,18 @@
 import UIKit
 import CoreData
 import WatchConnectivity
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        solicitarNotificacao()
         
         if WCSession.isSupported(){
             let session = WCSession.default
@@ -26,6 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
         
         return true
+    }
+    
+    func solicitarNotificacao(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound]){
+            (auto, erro) in
+            if auto == true{
+                UNUserNotificationCenter.current().delegate = self
+            }
+        }
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

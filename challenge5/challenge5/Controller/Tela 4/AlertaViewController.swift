@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import WatchConnectivity
+import UserNotifications
 
 class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
   
@@ -174,6 +176,7 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     }
     
     @IBAction func Salvar(_ sender: Any) {
+        
         if let ind = indexSelected{
             var dias = ""
             var listAtivados : [String] = []
@@ -187,6 +190,24 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
                 dias += "\(iten)|"
             }
             editHorario(index: ind, horario: horarioPicker.text ?? "", dias: String(dias.dropLast()))
+            
+            let indentificador = NSUUID().uuidString
+            let conteudo = UNMutableNotificationContent()
+            conteudo.body = "Ler \(livrosPicker.text!)"
+            
+            var dateComponente = DateComponents()
+            let hora = String((horarioPicker.text?.split(separator: ":").first)!)
+            let minuto = String((horarioPicker.text?.split(separator: ":").last)!)
+            
+            dateComponente.hour = Int(hora)
+            dateComponente.minute = Int(minuto)
+            let tipoNotificacao = UNCalendarNotificationTrigger(dateMatching: dateComponente, repeats: false)
+            let request = UNNotificationRequest(identifier: indentificador, content: conteudo, trigger: tipoNotificacao)
+            
+            UNUserNotificationCenter.current().add(request){ a -> Void in
+                WCSession.default.transferCurrentComplicationUserInfo(["nome":"\(self.livrosPicker.text!)"])
+            }
+            
             DiasdaSemana.all = DiasdaSemana.inicio
             navigationController?.popViewController(animated: true)
         }

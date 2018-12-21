@@ -117,6 +117,8 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
   
     @IBOutlet weak var livrosPicker: UITextField!
     
+    @IBOutlet weak var dias: UIButton!
+    
     @IBOutlet weak var horarioPicker: UITextField!
     
 
@@ -129,17 +131,38 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(listDias)
+        print(DiasdaSemana.all)
+        trocarTextoDias()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
     
-//    override func viewDidDisappear(_ animated: Bool) {
-//        self.tabBarController?.tabBar.isHidden = false
-//    }
+    func trocarTextoDias() {
+        var listAtivados : [String] = []
+        for iten in DiasdaSemana.all.enumerated(){
+            if iten.element.enabled{
+                listAtivados.append(iten.element.Dsemana)
+            }
+        }
+        if listAtivados.count == 1{
+            dias.titleLabel?.text = "Todo(a) \(listAtivados[0])"
+        }
+        else if listAtivados == ["Domingo","Sábado"]{
+            dias.titleLabel?.text = "Todo fins de semana"
+        }
+        else if listAtivados == ["Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira"]{
+            dias.titleLabel?.text = "Todos os dias da semana"
+        }
+        else{
+            var title = "Toda "
+            for i in listAtivados{
+                title += "\(i), "
+            }
+            title = String(title.dropLast())
+            dias.titleLabel?.text = title
+        }
+    }
 
 }
-
-var listDias : [Bool] = [false, false, false, false, false, false, false]

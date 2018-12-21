@@ -13,6 +13,7 @@ class diasTableViewCell: UITableViewCell {
     
     @IBOutlet weak var diasText: UILabel!
     @IBOutlet weak var boolSwitch: UISwitch!
+    var indexCell : Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +26,8 @@ class diasTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func change(_ sender: Any) {
+        DiasdaSemana.all[indexCell!].enabled = boolSwitch.isOn
+    }
+    
 }

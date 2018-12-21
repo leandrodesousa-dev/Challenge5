@@ -11,7 +11,7 @@ import Foundation
 public struct Dias {
    
     let Dsemana : String
-    let enabled : Bool
+    var enabled : Bool
     
     init(title: String, enable: Bool) {
         self.Dsemana = title
@@ -21,7 +21,7 @@ public struct Dias {
 }
 
 public struct DiasdaSemana {
-    public static let all: [Dias] = [
+    public static var all: [Dias] = [
         Dias(title: "Domingo", enable: false),
         Dias(title: "Segunda-Feira", enable: false),
         Dias(title: "Terça-Feira", enable: false),

@@ -429,12 +429,19 @@
                                     <outlet property="delegate" destination="Xen-Dm-Bhq" id="7wL-PN-7IS"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtC-qq-Iht">
-                                <rect key="frame" x="57" y="341" width="206" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YtC-qq-Iht">
+                                <rect key="frame" x="57" y="341" width="261" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="29"/>
-                                <state key="normal" title="Dia da semana">
-                                    <color key="titleColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Dia da semana">
+                                            <attributes>
+                                                <color key="NSColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="29" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="NkL-PC-cyf" kind="show" id="Din-ef-t65"/>
@@ -451,6 +458,7 @@
                         <viewLayoutGuide key="safeArea" id="NW5-9d-AwO"/>
                     </view>
                     <connections>
+                        <outlet property="dias" destination="YtC-qq-Iht" id="fmz-Gk-c8K"/>
                         <outlet property="horarioPicker" destination="biX-vo-5EK" id="DVM-Ss-uQx"/>
                         <outlet property="imgLivro" destination="arl-e8-m96" id="eOd-Gr-B2Y"/>
                         <outlet property="livrosPicker" destination="Hye-V0-QH4" id="60x-Hw-DZi"/>
@@ -487,9 +495,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXU-6A-eGo">
+                                                    <rect key="frame" x="311" y="6" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="change:" destination="vzb-mI-q4v" eventType="valueChanged" id="4Ol-o9-LrY"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="boolSwitch" destination="mXU-6A-eGo" id="rSw-id-UXR"/>
                                             <outlet property="diasText" destination="Jxt-g7-hUv" id="bXN-Pe-Hda"/>
                                         </connections>
                                     </tableViewCell>

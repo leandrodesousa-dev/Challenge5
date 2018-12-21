@@ -20,8 +20,11 @@ class DiasViewController: UIViewController,UITableViewDataSource, UITableViewDel
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! diasTableViewCell
        
         let dias = DiasdaSemana.all[indexPath.row]
+        
      
         cell.diasText.text = dias.Dsemana
+        cell.boolSwitch.isOn = dias.enabled
+        cell.indexCell = indexPath.row
         
      return cell
     }

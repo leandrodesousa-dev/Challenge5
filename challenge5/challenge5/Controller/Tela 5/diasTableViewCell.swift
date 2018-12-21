@@ -12,6 +12,7 @@ class diasTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var diasText: UILabel!
+    @IBOutlet weak var boolSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()

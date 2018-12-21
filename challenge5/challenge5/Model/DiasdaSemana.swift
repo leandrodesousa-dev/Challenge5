@@ -10,22 +10,24 @@ import Foundation
 
 public struct Dias {
    
-    let Dsemana: String
+    let Dsemana : String
+    let enabled : Bool
     
-    init(title: String) {
+    init(title: String, enable: Bool) {
         self.Dsemana = title
+        self.enabled = enable
     }
     
 }
 
 public struct DiasdaSemana {
     public static let all: [Dias] = [
-        Dias(title: "Domingo"),
-        Dias(title: "Segunda-Feira"),
-        Dias(title: "Terça-Feira"),
-        Dias(title: "Quarta-Feira"),
-        Dias(title: "Quinta-Feira"),
-        Dias(title: "Sexta-Feira"),
-        Dias(title: "Sábado")
+        Dias(title: "Domingo", enable: false),
+        Dias(title: "Segunda-Feira", enable: false),
+        Dias(title: "Terça-Feira", enable: false),
+        Dias(title: "Quarta-Feira", enable: false),
+        Dias(title: "Quinta-Feira", enable: false),
+        Dias(title: "Sexta-Feira", enable: false),
+        Dias(title: "Sábado", enable: false)
     ]
 }

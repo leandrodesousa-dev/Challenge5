@@ -25,6 +25,7 @@
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                                                     </label>
                                                     <label height="0.5" alignment="center" verticalAlignment="bottom" text="Label" id="cUQ-V7-eio">
+                                                        <color key="textColor" red="0.47010911329999999" green="0.8459826801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                                                     </label>
                                                 </items>
@@ -44,7 +45,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="416" y="345"/>
+            <point key="canvasLocation" x="412" y="354"/>
         </scene>
         <!--InterfaceControllerRelogio-->
         <scene sceneID="fgg-Qf-7oj">
@@ -79,7 +80,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="872" y="354"/>
+            <point key="canvasLocation" x="857" y="354"/>
         </scene>
         <!--Paginas-->
         <scene sceneID="UgF-Zz-57Y">
@@ -160,7 +161,7 @@ parou?</string>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1373" y="355"/>
+            <point key="canvasLocation" x="1355" y="355"/>
         </scene>
         <!--Progresso-->
         <scene sceneID="U6C-g3-c0y">
@@ -172,8 +173,18 @@ parou?</string>
                             <fontDescription key="font" type="system" pointSize="11"/>
                         </label>
                         <label height="0.10000000000000001" alignment="left" text="120/500" id="pxb-8J-x74"/>
+                        <group width="1" height="0.25" alignment="left" layout="overlap" id="DMN-0q-xaG">
+                            <items>
+                                <button width="1" alignment="left" id="1Vj-vX-6zH"/>
+                                <button width="0.10000000000000001" alignment="left" id="dZ9-LJ-lyw">
+                                    <color key="titleColor" red="0.0026702226609999998" green="0.27503338459999999" blue="0.44118806719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.47010911329999999" green="0.8459826801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="coiso" destination="dZ9-LJ-lyw" id="iAa-p9-2sp"/>
                         <outlet property="progressoLabel" destination="pxb-8J-x74" id="HVZ-lv-czB"/>
                     </connections>
                 </controller>

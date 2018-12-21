@@ -122,6 +122,7 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     @IBOutlet weak var horarioPicker: UITextField!
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         descerPickerView()
@@ -165,4 +166,5 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
         }
     }
 
+    
 }

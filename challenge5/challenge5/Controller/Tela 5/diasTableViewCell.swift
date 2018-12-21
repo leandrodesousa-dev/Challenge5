@@ -10,7 +10,9 @@ import UIKit
 
 class diasTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var textTeste: UITextField!
     
+   
     @IBOutlet weak var diasText: UILabel!
     @IBOutlet weak var boolSwitch: UISwitch!
     var indexCell : Int?

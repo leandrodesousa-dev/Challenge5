@@ -3,7 +3,7 @@
     {
       "size" : "24x24",
       "idiom" : "watch",
-      "filename" : "icon_24pt@2x.png",
+      "filename" : "nc_38mm 2x.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
@@ -11,7 +11,7 @@
     {
       "size" : "27.5x27.5",
       "idiom" : "watch",
-      "filename" : "icon_27,5pt@2x.png",
+      "filename" : "nc_42mm 2x.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "42mm"
@@ -31,7 +31,7 @@
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "40pt@2x.png",
+      "filename" : "hs_38mm 2x.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -39,7 +39,7 @@
     {
       "size" : "44x44",
       "idiom" : "watch",
-      "filename" : "44pt@2x.png",
+      "filename" : "hs_40mm 2x.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "40mm"
@@ -54,7 +54,7 @@
     {
       "size" : "86x86",
       "idiom" : "watch",
-      "filename" : "icon_86pt@2x.png",
+      "filename" : "sl_38mm 2x.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "38mm"
@@ -62,7 +62,7 @@
     {
       "size" : "98x98",
       "idiom" : "watch",
-      "filename" : "icon_98pt@2x.png",
+      "filename" : "sl_40mm 2x.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
@@ -70,7 +70,6 @@
     {
       "size" : "108x108",
       "idiom" : "watch",
-      "filename" : "icon_108pt@2x.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "44mm"

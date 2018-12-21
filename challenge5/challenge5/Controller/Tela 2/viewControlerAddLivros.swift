@@ -74,6 +74,7 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self, name: viewControlerAddLivros.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: viewControlerAddLivros.keyboardWillHideNotification, object: nil)
+        self.tabBarController?.tabBar.isHidden = false
         
     }
     
@@ -82,6 +83,7 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
         DispatchQueue.main.async{
             sendContext()
         }
+        self.tabBarController?.tabBar.isHidden = false
         navigationController?.popToRootViewController(animated: true)
     }
     

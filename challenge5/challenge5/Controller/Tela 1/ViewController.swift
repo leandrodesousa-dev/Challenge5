@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         super.viewDidLoad()
         
         self.tabBarController?.tabBar.isHidden = false
-  
+        
         //navigationController?.isNavigationBarHidden = true
         initCoreData()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.notificacaoDerecebimento(_:)), name: notificacaoDeCadastroDeLivro, object: nil)

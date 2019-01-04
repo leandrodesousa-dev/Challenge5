@@ -39,28 +39,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUse
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        if let coiso = userInfo["nome"]{
-            
-            let identificador = NSUUID().uuidString
-            let conteudo = UNMutableNotificationContent()
-            conteudo.body = "Ler \(coiso)"
-            
-            let tipoNotificacao = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            
-            let requisicao = UNNotificationRequest(identifier: identificador, content: conteudo, trigger: tipoNotificacao)
-            
-            UNUserNotificationCenter.current().add(requisicao) { (erro) in
-                
-                if erro != nil {
-                    print("Erro")
-                }else{
-                    print("Sucesso")
-                }
-                
-            }
-            
-        }
-        else{
             listaTitulo = userInfo["1"] as? [String] ?? []
             listaAtual = userInfo["2"] as? [Int] ?? []
             listaPaginas = userInfo["3"] as? [Int] ?? []
@@ -71,7 +49,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, UNUse
             }
             listaAudio = userInfo["5"] as? [String] ?? listaVazia
             NotificationCenter.default.post(name: notificacaoDeRecebimentoDeLivro, object: nil)
-        }
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {

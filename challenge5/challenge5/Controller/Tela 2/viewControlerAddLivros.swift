@@ -101,7 +101,7 @@ class viewControlerAddLivros: UIViewController, UIImagePickerControllerDelegate,
         let image = info[.originalImage] as! UIImage
         
             galeriaOut.setImage(image, for: .normal)
-        
+            self.tabBarController?.tabBar.isHidden = true
           dismiss(animated: true, completion: nil)
         
     }

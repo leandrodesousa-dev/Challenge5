@@ -205,7 +205,7 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
             let request = UNNotificationRequest(identifier: indentificador, content: conteudo, trigger: tipoNotificacao)
             
             UNUserNotificationCenter.current().add(request){ a -> Void in
-                WCSession.default.transferCurrentComplicationUserInfo(["nome":"\(self.livrosPicker.text!)"])
+                //
             }
             
             DiasdaSemana.all = DiasdaSemana.inicio

@@ -38,7 +38,7 @@ class ProgressoViewController: WKInterfaceController {
     }
     
     func animar(atual: Int, paginas: Int) {
-        animate(withDuration: 1, animations: {self.coiso.setRelativeWidth(CGFloat(atual/paginas), withAdjustment: CGFloat(0))})
+        animate(withDuration: 1, animations: {self.coiso.setRelativeWidth(CGFloat(Float(atual)/Float(paginas)), withAdjustment: CGFloat(0))})
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ProgressoViewController.action), userInfo: nil , repeats: false)
     }
     

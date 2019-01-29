@@ -177,9 +177,12 @@ class AlertaViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
     
     @IBAction func Salvar(_ sender: Any) {
         
+        // TODO: não pega o dia da semana
+        
         if let ind = indexSelected{
             var dias = ""
             var listAtivados : [String] = []
+           
             for iten in DiasdaSemana.all.enumerated(){
                 if iten.element.enabled{
                     listAtivados.append(iten.element.Dsemana)

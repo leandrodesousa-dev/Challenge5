@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Livros-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InterfaceControllerLivros" title="Livros" id="AgC-eL-Hgc" customClass="InterfaceControllerLivros" customModule="challenge5_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="Nbm-5L-Yko">
+                            <items>
+                                <table alignment="center" verticalAlignment="center" id="L9I-1F-nEv">
+                                    <items>
+                                        <tableRow identifier="RowController" id="8hM-Tu-QSD" customClass="RowController" customModule="challenge5_WatchKit_Extension">
+                                            <group key="rootItem" width="1" alignment="left" layout="vertical" id="K5d-Oy-Huv">
+                                                <items>
+                                                    <label height="0.5" alignment="left" text="Label" id="NKV-Zn-K4r">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                    </label>
+                                                    <label height="0.5" alignment="center" verticalAlignment="bottom" text="Label" id="cUQ-V7-eio">
+                                                        <color key="textColor" red="0.47010911329999999" green="0.8459826801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="progressoLabel" destination="cUQ-V7-eio" id="WFa-rC-yK5"/>
+                                                <outlet property="rowLabel" destination="NKV-Zn-K4r" id="c5G-Vj-gYu"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="L9I-1F-nEv" id="GQn-dt-OqX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="412" y="354"/>
+        </scene>
+        <!--InterfaceControllerRelogio-->
+        <scene sceneID="fgg-Qf-7oj">
+            <objects>
+                <controller identifier="InterfaceControllerRelogio" id="2fL-04-f34" customClass="InterfaceControllerRelogio" customModule="challenge5_WatchKit_Extension">
+                    <items>
+                        <label height="0.10000000000000001" alignment="center" text="Tempo de leitura" id="wMz-v7-Vp0">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <label height="0.29999999999999999" alignment="center" verticalAlignment="bottom" text="00:00:00" id="QVo-ZB-vYf">
+                            <color key="textColor" red="0.086678512394428253" green="0.51941472291946411" blue="0.66960698366165161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="34"/>
+                        </label>
+                        <button width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" title="Start" id="rCs-AN-K1g">
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <connections>
+                                <action selector="IniciarPausar" destination="2fL-04-f34" id="lVr-R7-48c"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" title="Finalizar" id="bSq-Z2-Afd">
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <connections>
+                                <action selector="FinalizarBt" destination="2fL-04-f34" id="5sj-gx-mR2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="LabelRelogio" destination="QVo-ZB-vYf" id="BVr-yt-0b3"/>
+                        <outlet property="btFinalizarOut" destination="bSq-Z2-Afd" id="QvI-q4-BlA"/>
+                        <outlet property="btIniciarOut" destination="rCs-AN-K1g" id="jfC-zo-aFB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="857" y="354"/>
+        </scene>
+        <!--Paginas-->
+        <scene sceneID="UgF-Zz-57Y">
+            <objects>
+                <controller identifier="InterfaceControllerPaginas" title="Paginas" id="2la-JL-M28" customClass="InterfaceControllerPaginas" customModule="challenge5_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.25" alignment="center" numberOfLines="0" id="MOO-7N-Ytc">
+                            <string key="text">Em que página você
+parou?</string>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <picker width="0.80000000000000004" height="0.29999999999999999" alignment="center" verticalAlignment="center" focusStyle="stack" indicatorMode="shownWhileFocused" id="Nh6-I3-637">
+                            <accessibilityTraits key="accessibilityTraits" staticText="YES" updatesFrequently="YES" adjustable="YES"/>
+                            <connections>
+                                <action selector="Trocou:" destination="2la-JL-M28" id="J70-HH-oSV"/>
+                            </connections>
+                        </picker>
+                        <button width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" title="Prosseguir" id="5gf-BT-yVr">
+                            <connections>
+                                <action selector="Prosseguir" destination="2la-JL-M28" id="8QJ-VK-Ehj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="piker" destination="Nh6-I3-637" id="BEA-I9-Sr5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1113" y="354"/>
+        </scene>
+        <!--Resumo-->
+        <scene sceneID="2WY-9r-GVE">
+            <objects>
+                <controller identifier="InterfaceControllerGravador" title="Resumo" id="BCI-Xf-2F0" customClass="InterfaceControllerGravador" customModule="challenge5_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.25" alignment="left" text="Gostaria de ouvir o último resumo?" textAlignment="justified" numberOfLines="0" id="OcC-AD-zwJ">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <button width="0.45000000000000001" height="0.45000000000000001" alignment="center" verticalAlignment="center" backgroundImage="Play" id="NDB-5A-OxO">
+                            <connections>
+                                <action selector="btGravador" destination="BCI-Xf-2F0" id="WKc-rt-wVR"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" title="Prosseguir" id="DSW-8s-87y">
+                            <connections>
+                                <action selector="Proseguir" destination="BCI-Xf-2F0" id="WOX-Zd-7HD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="prosseguiButton" destination="DSW-8s-87y" id="eAV-2x-cvq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="642" y="355"/>
+        </scene>
+        <!--Resumo-->
+        <scene sceneID="7BP-IJ-nSE">
+            <objects>
+                <controller identifier="InterfaceControllerReprodutor" title="Resumo" id="Yxx-O8-SSf" customClass="InterfaceControllerReprodutor" customModule="challenge5_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="0.25" alignment="left" text="Gostaria de ouvir o último resumo?" textAlignment="justified" numberOfLines="0" id="mWd-uO-Rqt">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <button width="0.45000000000000001" height="0.45000000000000001" alignment="center" verticalAlignment="center" backgroundImage="record" id="zMO-BQ-dyL">
+                            <connections>
+                                <action selector="Gravar" destination="Yxx-O8-SSf" id="tXp-2L-zg8"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="0.29999999999999999" alignment="center" verticalAlignment="bottom" title="Prosseguir" id="tRT-wz-H52">
+                            <connections>
+                                <action selector="Prosseguir" destination="Yxx-O8-SSf" id="DPs-nG-4dj"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="prosseguiButton" destination="tRT-wz-H52" id="FRA-4K-3SY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1355" y="355"/>
+        </scene>
+        <!--Progresso-->
+        <scene sceneID="U6C-g3-c0y">
+            <objects>
+                <controller identifier="Progresso" title="Progresso" id="3V9-0K-CL3" customClass="ProgressoViewController" customModule="challenge5_WatchKit_Extension">
+                    <items>
+                        <imageView width="0.59999999999999998" height="0.5" alignment="left" image="ok" id="Rhq-iU-h18"/>
+                        <label height="0.10000000000000001" alignment="left" text="Seu Progresso foi salvo!" id="edo-ak-Gbi">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <label height="0.10000000000000001" alignment="left" text="120/500" id="pxb-8J-x74"/>
+                        <group width="1" height="0.25" alignment="left" layout="overlap" id="DMN-0q-xaG">
+                            <items>
+                                <button width="1" alignment="left" id="1Vj-vX-6zH"/>
+                                <button width="0.10000000000000001" alignment="left" id="dZ9-LJ-lyw">
+                                    <color key="titleColor" red="0.0026702226609999998" green="0.27503338459999999" blue="0.44118806719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.47010911329999999" green="0.8459826801" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="coiso" destination="dZ9-LJ-lyw" id="iAa-p9-2sp"/>
+                        <outlet property="progressoLabel" destination="pxb-8J-x74" id="HVZ-lv-czB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1653" y="359"/>
+        </scene>
+    </scenes>
+</document>
